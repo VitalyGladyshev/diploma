@@ -1,0 +1,117 @@
+
+-Goal-
+Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.
+
+-Steps-
+1. Identify all entities. For each identified entity, extract the following information:
+- entity_name: Name of the entity, capitalized
+- entity_type: One of the following types: [command, parameter, 3D scene, transformation, object, curve, surface, model, assembly, navigation, dialog, tool, visibility, geometry, texture, dimension, variable, comment, error marking, interface, user action]
+- entity_description: Comprehensive description of the entity's attributes and activities
+Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
+- relationship_strength: an integer score between 1 to 10, indicating strength of the relationship between the source entity and target entity
+Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
+
+3. Return output in Russian as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+
+4. If you have to translate into Russian, just translate the descriptions, nothing else!
+
+5. When finished, output {completion_delimiter}.
+
+-Examples-
+######################
+
+Example 1:
+
+entity_types: [command, parameter, 3D scene, transformation, object, curve, surface, model, assembly, navigation, dialog, tool, visibility, geometry, texture, dimension, variable, comment, error marking, interface, user action]
+text:
+ований также могут быть заданы. Изменение направления осей СК может быть осуществлён через преобразование «Поворот вокруг оси…».СК могут быть перемещены в заданную точку. Для этого следует выделить СК в 3D-сцене, кликнуть на маркер начала СК и переместить её, совместив маркер с этой точкой. Эта манипуляция также позволит задать начальную точку СК в преобразованиях, описанных ниже.Для ориентации СК по двум осям (отрезкам, рёбрам, направлениям) используются преобразования «Направить ось … параллельно». После выбора преобразования следует указать объект привязки, относительно будет задаваться параллельность. Это же преобразование позволит сориентировать СК по трём плоскостям и по плоскости и направлению.Для ориентации СК по точке перпендикулярно к кривой или поверхности следует переместить СК в данную точку, а затем добавить преобразование «Направить ось … на точку», выбрав в качестве объекта привязки кривую, поверхность, грань, плоскость, с которой нужно обеспечить перпендикулярность.Для установки рабочей СК согласно положению абсолютной СК следует удалить все преобразования рабочей СК. Для установки рабочей СК в СК текущего 3D-вида предназначена специальная опция. После ее активации модель в 3D-сцене повернется так, что ось X рабочей СК будет направлена по горизонтали плоскости экрана, Y - по вертикали, а Z будет перпендикулярна плоскости экрана. Любая СК, в том числе рабочая, может быть скрыта с помощью параметра «Видимый» в свойствах СК.
+------------------------
+output:
+("entity"{tuple_delimiter}ПРЕОБРАЗОВАНИЕ «ПОВОРОТ ВОКРУГ ОСИ…»{tuple_delimiter}command{tuple_delimiter}Преобразование, которое позволяет изменить направление осей системы координат (СК) вокруг заданной оси.)
+{record_delimiter}
+("entity"{tuple_delimiter}3D-СЦЕНА{tuple_delimiter}3D scene{tuple_delimiter}Трехмерное пространство, в котором располагаются объекты и системы координат.)
+{record_delimiter}
+("entity"{tuple_delimiter}СК{tuple_delimiter}object{tuple_delimiter}Система координат, которая может быть перемещена и ориентирована в 3D-сцене.)
+{record_delimiter}
+("entity"{tuple_delimiter}МАРКЕР{tuple_delimiter}object{tuple_delimiter}Объект, используемый для выделения начальной точки системы координат в 3D-сцене.)
+{record_delimiter}
+("entity"{tuple_delimiter}ПРЕОБРАЗОВАНИЕ «НАПРАВИТЬ ОСЬ … ПАРАЛЛЕЛЬНО»{tuple_delimiter}command{tuple_delimiter}Преобразование, позволяющее ориентировать ось системы координат параллельно заданному объекту.)
+{record_delimiter}
+("entity"{tuple_delimiter}ОБЪЕКТ ПРИВЯЗКИ{tuple_delimiter}object{tuple_delimiter}Объект, относительно которого задается параллельность оси системы координат.)
+{record_delimiter}
+("entity"{tuple_delimiter}ПЛОСКОСТЬ{tuple_delimiter}surface{tuple_delimiter}Геометрическая поверхность, используемая для ориентации системы координат.)
+{record_delimiter}
+("entity"{tuple_delimiter}КРИВАЯ{tuple_delimiter}curve{tuple_delimiter}Геометрическая кривая, используемая для ориентации системы координат перпендикулярно к ней.)
+{record_delimiter}
+("entity"{tuple_delimiter}ПАРАМЕТР «ВИДИМЫЙ»{tuple_delimiter}parameter{tuple_delimiter}Параметр, который определяет, будет ли система координат видимой в 3D-сцене.)
+{record_delimiter}
+("entity"{tuple_delimiter}МОДЕЛЬ{tuple_delimiter}model{tuple_delimiter}Трехмерный объект, который может быть повернут и ориентирован в 3D-сцене.)
+{record_delimiter}
+("relationship"{tuple_delimiter}СК{tuple_delimiter}МАРКЕР{tuple_delimiter}Маркер используется для выделения начальной точки системы координат в 3D-сцене{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}СК{tuple_delimiter}ПРЕОБРАЗОВАНИЕ «ПОВОРОТ ВОКРУГ ОСИ…»{tuple_delimiter}Преобразование «Поворот вокруг оси…» изменяет направление осей системы координат{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}СК{tuple_delimiter}ПРЕОБРАЗОВАНИЕ «НАПРАВИТЬ ОСЬ … ПАРАЛЛЕЛЬНО»{tuple_delimiter}Преобразование «Направить ось … параллельно» используется для ориентации системы координат{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}ПРЕОБРАЗОВАНИЕ «НАПРАВИТЬ ОСЬ … ПАРАЛЛЕЛЬНО»{tuple_delimiter}ОБЪЕКТ ПРИВЯЗКИ{tuple_delimiter}Объект привязки используется в преобразовании «Направить ось … параллельно» для задания параллельности{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}СК{tuple_delimiter}ПЛОСКОСТЬ{tuple_delimiter}Система координат может быть ориентирована относительно плоскости{tuple_delimiter}6)
+{record_delimiter}
+("relationship"{tuple_delimiter}СК{tuple_delimiter}КРИВАЯ{tuple_delimiter}Система координат может быть ориентирована перпендикулярно к кривой{tuple_delimiter}6)
+{record_delimiter}
+("relationship"{tuple_delimiter}СК{tuple_delimiter}ПАРАМЕТР «ВИДИМЫЙ»{tuple_delimiter}Параметр «Видимый» управляет видимостью системы координат в 3D-сцене{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}МОДЕЛЬ{tuple_delimiter}СК{tuple_delimiter}Модель может быть повернута в 3D-сцене, чтобы соответствовать ориентации системы координат{tuple_delimiter}7)
+{completion_delimiter}
+#############################
+
+
+Example 2:
+
+entity_types: [command, parameter, 3D scene, transformation, object, curve, surface, model, assembly, navigation, dialog, tool, visibility, geometry, texture, dimension, variable, comment, error marking, interface, user action]
+text:
+уле CAD предусмотрена индикация неактуальных проекционных видов. Это полезно для тех видов, у которых задан ручной пересчёт. В «Навигаторе модели» неактуальные виды помечаются специальным маркером состояния, а в рабочем окне рамка описывающего прямоугольника имеет оранжевый цвет (рис. Рисунок). Актуальные виды помечаются рамкой зеленого цвета.Проекционные виды в «Навигаторе модели»Рисунок Разрыв ассоциативной связи проекционного вида с моделью осуществляется с помощью опции «Разорвать связью», вызываемой из контекстного меню текущего вида (рис. Рисунок). При этом все зависимые виды также будут преобразованы в набор несвязанных элементов.Контекстное меню текущего видаРисунок Вызов режима редактирования проекционного вида, его удаление, обновление, а также открытие в отдельном окне осуществляется также из контекстного меню.
+------------------------
+output:
+("entity"{tuple_delimiter}НЕАКТУАЛЬНЫЕ ПРОЕКЦИОННЫЕ ВИДЫ{tuple_delimiter}OBJECT{tuple_delimiter}Неактуальные проекционные виды помечаются специальным маркером состояния в «Навигаторе модели» и имеют оранжевую рамку в рабочем окне)
+{record_delimiter}
+("entity"{tuple_delimiter}АКТУАЛЬНЫЕ ПРОЕКЦИОННЫЕ ВИДЫ{tuple_delimiter}OBJECT{tuple_delimiter}Актуальные проекционные виды помечаются рамкой зеленого цвета в рабочем окне)
+{record_delimiter}
+("entity"{tuple_delimiter}НАВИГАТОР МОДЕЛИ{tuple_delimiter}TOOL{tuple_delimiter}Навигатор модели используется для отображения и управления проекционными видами, включая их актуальность)
+{record_delimiter}
+("entity"{tuple_delimiter}КОНТЕКСТНОЕ МЕНЮ{tuple_delimiter}DIALOG{tuple_delimiter}Контекстное меню текущего вида позволяет вызывать опции, такие как «Разорвать связью», редактирование, удаление и обновление проекционного вида)
+{record_delimiter}
+("entity"{tuple_delimiter}ОПЦИЯ «РАЗОРВАТЬ СВЯЗЬ»{tuple_delimiter}COMMAND{tuple_delimiter}Опция «Разорвать связью» используется для разрыва ассоциативной связи проекционного вида с моделью)
+{record_delimiter}
+("entity"{tuple_delimiter}РАМКА{tuple_delimiter}GEOMETRY{tuple_delimiter}Рамка описывающего прямоугольника используется для визуального обозначения актуальности проекционных видов в рабочем окне)
+{record_delimiter}
+("relationship"{tuple_delimiter}НЕАКТУАЛЬНЫЕ ПРОЕКЦИОННЫЕ ВИДЫ{tuple_delimiter}НАВИГАТОР МОДЕЛИ{tuple_delimiter}Неактуальные проекционные виды отображаются в Навигаторе модели с помощью специального маркера состояния{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}АКТУАЛЬНЫЕ ПРОЕКЦИОННЫЕ ВИДЫ{tuple_delimiter}НАВИГАТОР МОДЕЛИ{tuple_delimiter}Актуальные проекционные виды также отображаются в Навигаторе модели с помощью визуальных индикаторов{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}КОНТЕКСТНОЕ МЕНЮ{tuple_delimiter}ОПЦИЯ «РАЗОРВАТЬ СВЯЗЬ»{tuple_delimiter}Опция «Разорвать связью» доступна через контекстное меню текущего вида{tuple_delimiter}7)
+{record_delimiter}
+("relationship"{tuple_delimiter}КОНТЕКСТНОЕ МЕНЮ{tuple_delimiter}АКТУАЛЬНЫЕ ПРОЕКЦИОННЫЕ ВИДЫ{tuple_delimiter}Контекстное меню позволяет управлять актуальными проекционными видами, включая их удаление и обновление{tuple_delimiter}6)
+{record_delimiter}
+("relationship"{tuple_delimiter}КОНТЕКСТНОЕ МЕНЮ{tuple_delimiter}НЕАКТУАЛЬНЫЕ ПРОЕКЦИОННЫЕ ВИДЫ{tuple_delimiter}Контекстное меню позволяет управлять неактуальными проекционными видами, включая их удаление и обновление{tuple_delimiter}6)
+{record_delimiter}
+("relationship"{tuple_delimiter}РАМКА{tuple_delimiter}АКТУАЛЬНЫЕ ПРОЕКЦИОННЫЕ ВИДЫ{tuple_delimiter}Актуальные проекционные виды помечаются зеленой рамкой в рабочем окне{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}РАМКА{tuple_delimiter}НЕАКТУАЛЬНЫЕ ПРОЕКЦИОННЫЕ ВИДЫ{tuple_delimiter}Неактуальные проекционные виды помечаются оранжевой рамкой в рабочем окне{tuple_delimiter}9)
+{completion_delimiter}
+#############################
+
+
+
+-Real Data-
+######################
+entity_types: [command, parameter, 3D scene, transformation, object, curve, surface, model, assembly, navigation, dialog, tool, visibility, geometry, texture, dimension, variable, comment, error marking, interface, user action]
+text: {input_text}
+######################
+output:

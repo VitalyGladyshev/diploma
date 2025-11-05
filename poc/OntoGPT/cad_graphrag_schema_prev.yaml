@@ -1,0 +1,439 @@
+id: https://example.org/cad-graphrag-ontology
+name: CADGraphRAGOntology
+description: Автоматически сгенерированная онтология из GraphRAG данных CAD системы
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cad: https://example.org/cad/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  owl: http://www.w3.org/2002/07/owl#
+  schema: http://schema.org/
+default_prefix: cad
+default_range: string
+classes:
+  command:
+    description: Сущности типа COMMAND из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    - ui_location
+    class_uri: cad:command
+    notes: 'На основе 570 сущностей. Примеры: УПРАВЛЕНИЕ ВИЗУАЛИЗАЦИЕЙ МОДЕЛИ, КОМАНДА
+      «ПЕРЕМЕСТИТЬ КОМПОНЕНТ», КОПИЯ'
+  Class_3d_scene:
+    description: Сущности типа 3D SCENE из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    - geometry_type
+    class_uri: cad:Class_3d_scene
+    notes: 'На основе 48 сущностей. Примеры: 3D-СЦЕНА, ЭСКИЗ, РИСУНОК'
+  tool:
+    description: Сущности типа TOOL из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:tool
+    notes: 'На основе 131 сущностей. Примеры: ПАНЕЛЬ «ВИД», МАНИПУЛЯТОР, ЗЕЛЕНАЯ И
+      СИНЯЯ СТРЕЛКИ'
+  parameter:
+    description: Сущности типа PARAMETER из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    - value
+    class_uri: cad:parameter
+    notes: 'На основе 949 сущностей. Примеры: СТИЛЬ ОТОБРАЖЕНИЯ, МЕТОД ПРОЕКЦИРОВАНИЯ,
+      МАСШТАБ ИЗОБРАЖЕНИЯ'
+  object:
+    description: Сущности типа OBJECT из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    - geometry_type
+    class_uri: cad:object
+    notes: 'На основе 401 сущностей. Примеры: РАБОЧЕЕ ОКНО, ПИКТОГРАММЫ, КОМПОНЕНТ'
+  interface:
+    description: Сущности типа INTERFACE из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:interface
+    notes: 'На основе 66 сущностей. Примеры: ПАНЕЛЬ «ЛЕНТА», ПАНЕЛЬ ФИЛЬТРОВ, КОЛОНКА
+      «СОСТОЯНИЕ»'
+  dialog:
+    description: Сущности типа DIALOG из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:dialog
+    notes: 'На основе 108 сущностей. Примеры: ДИАЛОГ, ДИАЛОГ ПАРАМЕТРОВ, ОКНО СВОЙСТВ'
+  button:
+    description: Сущности типа BUTTON из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:button
+    notes: 'На основе 4 сущностей. Примеры: КНОПКА «ОК», КНОПКА ВЫЗОВА СПРАВКИ, КНОПКИ
+      ЗАПУСКА УСТАНОВОК'
+  user_action:
+    description: Сущности типа USER ACTION из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:user_action
+    notes: 'На основе 12 сущностей. Примеры: ЛКМ, МЕТОД «DRAG-AND-DROP», ДЕЙСТВИЕ'
+  geometry:
+    description: Сущности типа GEOMETRY из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    - geometry_type
+    class_uri: cad:geometry
+    notes: 'На основе 21 сущностей. Примеры: СИСТЕМА КООРДИНАТ, ОКРУЖНОСТЬ, ФОРМА
+      ПЯТНА КОНТАКТА'
+  curve:
+    description: Сущности типа CURVE из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:curve
+    notes: 'На основе 17 сущностей. Примеры: КРИВАЯ, ПЕРЕХОДНЫЕ КРИВЫЕ, ЛИНИЯ ОКРУЖНОСТИ'
+  assembly:
+    description: Сущности типа ASSEMBLY из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:assembly
+    notes: 'На основе 4 сущностей. Примеры: ГРУППА РЕЖИМОВ И КОМАНД, БЛОК «ОБЪЕКТЫ
+      ДЛЯ УКЛОНА», ПАРА РЕБРА И ГРАНИ'
+  model:
+    description: Сущности типа MODEL из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:model
+    notes: 'На основе 9 сущностей. Примеры: ПАРАМЕТРИЧЕСКИЕ ИЗОБРАЖЕНИЯ, 3D-МОДЕЛЬ,
+      МОДЕЛЬ КОМПОНЕНТА'
+  variable:
+    description: Сущности типа VARIABLE из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:variable
+    notes: 'На основе 95 сущностей. Примеры: СОСТОЯНИЕ ЭСКИЗА, ЦВЕТА, ИМЯ ФАЙЛА'
+  comment:
+    description: Сущности типа COMMENT из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:comment
+    notes: 'На основе 14 сущностей. Примеры: НЕДООПРЕДЕЛЕН, ПОЛНОСТЬЮ ОПРЕДЕЛЕН, ПЕРЕОПРЕДЕЛЕН'
+  visibility:
+    description: Сущности типа VISIBILITY из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:visibility
+    notes: 'На основе 9 сущностей. Примеры: ЦВЕТОВАЯ ИНДИКАЦИЯ, ВИДИМОСТЬ, ПОДСВЕТКА'
+  relationship:
+    description: Сущности типа RELATIONSHIP из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:relationship
+    notes: 'На основе 1 сущностей. Примеры: СВЯЗЬ'
+  error_marking:
+    description: Сущности типа ERROR MARKING из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:error_marking
+    notes: 'На основе 5 сущностей. Примеры: ИНФОРМАТИВНОЕ СООБЩЕНИЕ ОБ ОШИБКЕ, ОШИБКА,
+      ЗВЁЗДОЧКА'
+  navigation:
+    description: Сущности типа NAVIGATION из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:navigation
+    notes: 'На основе 5 сущностей. Примеры: ВЫПАДАЮЩЕЕ МЕНЮ «ФАЙЛ», КОНТЕКСТНОЕ МЕНЮ
+      ПАНЕЛИ «ЛЕНТА», КОНТЕКСТ КОМАНД'
+  surface:
+    description: Сущности типа SURFACE из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:surface
+    notes: 'На основе 15 сущностей. Примеры: ПЛОСКОСТЬ, РАБОЧАЯ ПЛОСКОСТЬ, ОРИЕНТИРУЮЩАЯ
+      ПЛОСКОСТЬ'
+  transformation:
+    description: Сущности типа TRANSFORMATION из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:transformation
+    notes: 'На основе 20 сущностей. Примеры: РЕЖИМ «КАСАТЕЛЬНАЯ ПЛОСКОСТЬ», РЕЖИМ
+      «КАСАТЕЛЬНАЯ К ДВУМ ОБЪЕКТАМ», РЕЖИМ «ПЛОСКОСТЬ ПО НОРМАЛИ»'
+  texture:
+    description: Сущности типа TEXTURE из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:texture
+    notes: 'На основе 3 сущностей. Примеры: ИЗОБРАЖЕНИЕ САМОГО ДОКУМЕНТА, ЦВЕТОВАЯ
+      ЭПЮРА, ТЕКСТУРА'
+  dimension:
+    description: Сущности типа DIMENSION из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:dimension
+    notes: 'На основе 7 сущностей. Примеры: ШКАЛА СОПОСТАВЛЕНИЯ ЦВЕТА И ЗНАЧЕНИЙ,
+      КОЛОНКА СКРЫТЫХ И ПОДАВЛЕННЫХ ОПЕРАЦИЙ, ОСЬ Y'
+  point:
+    description: Сущности типа POINT из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:point
+    notes: 'На основе 1 сущностей. Примеры: ПРИВЯЗКА ПЕРВОЙ СТРЕЛКИ'
+  menu:
+    description: Сущности типа MENU из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:menu
+    notes: 'На основе 2 сущностей. Примеры: ОПЦИИ КОНТЕКСТНОГО МЕНЮ, ВЫПАДАЮЩЕЕ МЕНЮ
+      НАСТРОЕК'
+  key:
+    description: Сущности типа KEY из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:key
+    notes: 'На основе 1 сущностей. Примеры: КЛАВИША <ESC>'
+  file:
+    description: Сущности типа FILE из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:file
+    notes: 'На основе 3 сущностей. Примеры: ФАЙЛ КОНФИГУРАЦИИ PROTOTYPES.INI, ВРЕМЕННЫЙ
+      ФАЙЛ ФОРМАТА XML, НАСТРОЕЧНЫЙ ФАЙЛ ФОРМАТА INI'
+  directory:
+    description: Сущности типа DIRECTORY из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:directory
+    notes: 'На основе 1 сущностей. Примеры: ДИРЕКТОРИЯ «C:\PROGRAM FILES\RPLM\PROGRAM\PROTOTYPES»'
+  section:
+    description: Сущности типа SECTION из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:section
+    notes: 'На основе 2 сущностей. Примеры: ПРЕОБРАЗОВАНИЯ, РАЗДЕЛ «ТРАНСФОРМАЦИЯ»'
+  image:
+    description: Сущности типа IMAGE из CAD системы
+    slots:
+    - id
+    - title
+    - description
+    - frequency
+    - degree
+    class_uri: cad:image
+    notes: 'На основе 1 сущностей. Примеры: ПОЛЬЗОВАТЕЛЬСКОЕ ИЗОБРАЖЕНИЕ'
+slots:
+  id:
+    description: Уникальный идентификатор сущности
+    range: string
+    slot_uri: cad:id
+    required: true
+  title:
+    description: Название сущности
+    range: string
+    slot_uri: cad:title
+    required: true
+  description:
+    description: Описание сущности
+    range: string
+    slot_uri: schema:description
+    required: false
+  frequency:
+    description: Частота встречаемости в документации
+    range: integer
+    slot_uri: cad:frequency
+    required: false
+  degree:
+    description: Степень связности в графе
+    range: integer
+    slot_uri: cad:degree
+    required: false
+  ui_location:
+    description: Расположение в интерфейсе
+    range: string
+    slot_uri: cad:ui_location
+    required: false
+  geometry_type:
+    description: Тип геометрического объекта
+    range: string
+    slot_uri: cad:geometry_type
+    required: false
+  value:
+    description: Значение параметра
+    range: string
+    slot_uri: cad:value
+    required: false
+  panel_yavlyaetsya_ispolzuemykh:
+    description: Панель является одним из типов инструментальных панелей, используемых
+      в CAD
+    range: uriorcurie
+    multivalued: true
+    slot_uri: cad:panel_yavlyaetsya_ispolzuemykh
+    comments: 'Частота: 5. Источники: []. Цели: []'
+  sposob_postroeniya_piktogrammoy:
+    description: Способ построения окружности выбирается из выпадающего списка под
+      пиктограммой команды
+    range: uriorcurie
+    multivalued: true
+    slot_uri: cad:sposob_postroeniya
+    comments: 'Частота: 5. Источники: []. Цели: []'
+  vybor_sposoba_parametrov:
+    description: Выбор способа построения дуги окружности осуществляется в диалоге
+      параметров команды
+    range: uriorcurie
+    multivalued: true
+    slot_uri: cad:vybor_sposoba_parametrov
+    comments: 'Частота: 5. Источники: []. Цели: []'
+  komandy_2d_obektov:
+    description: Обе команды относятся к процессу копирования 2D-объектов в CAD
+    range: uriorcurie
+    multivalued: true
+    slot_uri: cad:komandy_2d_obektov
+    comments: 'Частота: 3. Источники: []. Цели: []'
+  posle_zapuska_sozdaniya:
+    description: После запуска команды открывается диалог параметров для настройки
+      создания поверхности
+    range: uriorcurie
+    multivalued: true
+    slot_uri: cad:posle_zapuska_sozdaniya
+    comments: 'Частота: 2. Источники: []. Цели: []'
+  tochka_ispolzuetsya_trem:
+    description: Точка 3 используется для задания направления оси Y в режиме «Система
+      координат по трём точкам»
+    range: uriorcurie
+    multivalued: true
+    slot_uri: cad:tochka_ispolzuetsya_trem
+    comments: 'Частота: 2. Источники: []. Цели: []'
+  elementy_sborki_elektronnuyu:
+    description: Элементы сборки могут быть добавлены в электронную структуру.
+    range: uriorcurie
+    multivalued: true
+    slot_uri: cad:elementy_sborki_elektronnuyu
+    comments: 'Частота: 2. Источники: []. Цели: []'
+  komanda_sechenie_paneli:
+    description: Команда «Сечение поверхностью» вызывается из выпадающего списка на
+      панели «Лента»
+    range: uriorcurie
+    multivalued: true
+    slot_uri: cad:komanda_sechenie_paneli
+    comments: 'Частота: 2. Источники: []. Цели: []'
+  knopka_dialoge_svobodnykh:
+    description: Кнопка в диалоге параметров предназначена для отображения списка
+      свободных букв
+    range: uriorcurie
+    multivalued: true
+    slot_uri: cad:knopka_dialoge_svobodnykh
+    comments: 'Частота: 2. Источники: []. Цели: []'
+enums: {}

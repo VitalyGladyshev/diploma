@@ -1,0 +1,140 @@
+id: https://example.org/cad-graphrag-ontology
+name: CADGraphRAGOntology
+title: CAD GraphRAG Ontology
+description: Автоматически сгенерированная онтология из GraphRAG данных CAD системы
+license: https://creativecommons.org/publicdomain/zero/1.0/
+imports:
+- linkml:types
+- core
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cad: https://example.org/cad/
+  schema: http://schema.org/
+default_prefix: cad
+default_range: string
+classes:
+  CADExtractionResult:
+    tree_root: true
+    description: Result of extracting CAD entities and relationships from documentation
+    attributes:
+      parameter_list:
+        description: semicolon-separated list of PARAMETER entities
+        multivalued: true
+        range: Parameter
+      command_list:
+        description: semicolon-separated list of COMMAND entities
+        multivalued: true
+        range: Command
+      object_list:
+        description: semicolon-separated list of OBJECT entities
+        multivalued: true
+        range: Object
+      tool_list:
+        description: semicolon-separated list of TOOL entities
+        multivalued: true
+        range: Tool
+      panel_yavlyaetsya_list:
+        description: semicolon-separated list of panel_yavlyaetsya relationships
+        multivalued: true
+        range: PanelYavlyaetsyaRelationship
+      sposob_postroeniya_list:
+        description: semicolon-separated list of sposob_postroeniya relationships
+        multivalued: true
+        range: SposobPostroeniyaRelationship
+      vybor_sposoba_list:
+        description: semicolon-separated list of vybor_sposoba relationships
+        multivalued: true
+        range: VyborSposobaRelationship
+      obe_komandy_list:
+        description: semicolon-separated list of obe_komandy relationships
+        multivalued: true
+        range: ObeKomandyRelationship
+  Parameter:
+    is_a: NamedEntity
+    description: Сущности типа PARAMETER из CAD системы
+    id_prefixes:
+    - CAD
+    annotations:
+      annotators: sqlite:obo:mesh
+  Command:
+    is_a: NamedEntity
+    description: Сущности типа COMMAND из CAD системы
+    id_prefixes:
+    - CAD
+    annotations:
+      annotators: sqlite:obo:mesh
+  Object:
+    is_a: NamedEntity
+    description: Сущности типа OBJECT из CAD системы
+    id_prefixes:
+    - CAD
+    annotations:
+      annotators: sqlite:obo:mesh
+  Tool:
+    is_a: NamedEntity
+    description: Сущности типа TOOL из CAD системы
+    id_prefixes:
+    - CAD
+    annotations:
+      annotators: sqlite:obo:mesh
+  PanelYavlyaetsyaRelationship:
+    is_a: CompoundExpression
+    description: 'Relationship: Панель является одним из типов инструментальных панелей,
+      используемых в CAD'
+    attributes:
+      source_entity:
+        description: The source entity in the relationship
+        range: NamedEntity
+        annotations:
+          prompt: the first entity in the relationship
+      target_entity:
+        description: The target entity in the relationship
+        range: NamedEntity
+        annotations:
+          prompt: the second entity in the relationship
+  SposobPostroeniyaRelationship:
+    is_a: CompoundExpression
+    description: 'Relationship: Способ построения окружности выбирается из выпадающего
+      списка под пиктограммой команды'
+    attributes:
+      source_entity:
+        description: The source entity in the relationship
+        range: NamedEntity
+        annotations:
+          prompt: the first entity in the relationship
+      target_entity:
+        description: The target entity in the relationship
+        range: NamedEntity
+        annotations:
+          prompt: the second entity in the relationship
+  VyborSposobaRelationship:
+    is_a: CompoundExpression
+    description: 'Relationship: Выбор способа построения дуги окружности осуществляется
+      в диалоге параметров команды'
+    attributes:
+      source_entity:
+        description: The source entity in the relationship
+        range: NamedEntity
+        annotations:
+          prompt: the first entity in the relationship
+      target_entity:
+        description: The target entity in the relationship
+        range: NamedEntity
+        annotations:
+          prompt: the second entity in the relationship
+  ObeKomandyRelationship:
+    is_a: CompoundExpression
+    description: 'Relationship: Обе команды относятся к процессу копирования 2D-объектов
+      в CAD'
+    attributes:
+      source_entity:
+        description: The source entity in the relationship
+        range: NamedEntity
+        annotations:
+          prompt: the first entity in the relationship
+      target_entity:
+        description: The target entity in the relationship
+        range: NamedEntity
+        annotations:
+          prompt: the second entity in the relationship
+slots: {}

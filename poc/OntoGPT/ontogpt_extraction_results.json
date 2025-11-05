@@ -1,0 +1,202 @@
+[
+  {
+    "document": "1 Назначение программного модуля CAD.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "2 Условия выполнения программного модуля CAD.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.1 Запуск программного модуля CAD.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.2 Управление приложениями.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.3 Работа с документами.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.3.1 Создание нового документа.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.3.2 Открытие документов.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.3.3 Сохранение документов.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.3.4 Закрытие документа.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.3.5.1 Свойства документа.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.3.5.2 Атрибуты документа.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.3.5.3 История документа.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.3.5.4 Стили объектов.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "3.4 Справочная система.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4 Интерфейс.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.1 Окна программного модуля CAD.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.1.1 Рабочие окна.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.1.2 Вспомогательные окна.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.2 Инструментальные панели.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.2.1 Панель «Лента».txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.2.2 Панель быстрого доступа.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.2.3 Панель опций.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.2.4 Меню «Файл».txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.2.5 Инструментальные панели рабочего окна.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.2.6 Контекстное меню.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.2.7 Динамическая панель и контекстное меню кнопок.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.2.8 Настройка интерфейса.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.3 Диалог параметров команд.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "4.4 Установки.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.1 Регистрация действий по изменению модели.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.10 Сцены.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.11 Управление представлениями.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.2 Регенерация модели.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.3 Удаление объектов модели.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.4 Диагностика состояния.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.5 Структура модели и история построения.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.6 Свойства объектов.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.7 Сведения об объекте.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.8 Управление объектами через слои.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  },
+  {
+    "document": "5.1.9 Управление приоритетом объектов.txt",
+    "error": "'tuple' object has no attribute 'class_induced_slots'",
+    "success": false
+  }
+]

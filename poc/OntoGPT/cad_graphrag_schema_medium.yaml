@@ -1,0 +1,954 @@
+id: https://example.org/cad-graphrag-ontology
+name: CADGraphRAGOntology
+title: CAD GraphRAG Ontology
+description: Автоматически сгенерированная онтология из GraphRAG данных CAD системы
+license: https://creativecommons.org/publicdomain/zero/1.0/
+imports:
+- linkml:types
+- core
+prefixes:
+  linkml: https://w3id.org/linkml/
+  cad: https://example.org/cad/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  owl: http://www.w3.org/2002/07/owl#
+  schema: http://schema.org/
+default_prefix: cad
+default_range: string
+classes:
+  CADExtractionResult:
+    tree_root: true
+    description: Результат извлечения информации из документации CAD системы
+    attributes:
+      command_list:
+        description: Список извлеченных сущностей типа COMMAND
+        multivalued: true
+        range: Command
+      entity3dscene_list:
+        description: Список извлеченных сущностей типа 3D SCENE
+        multivalued: true
+        range: Entity3dScene
+      tool_list:
+        description: Список извлеченных сущностей типа TOOL
+        multivalued: true
+        range: Tool
+      parameter_list:
+        description: Список извлеченных сущностей типа PARAMETER
+        multivalued: true
+        range: Parameter
+      object_list:
+        description: Список извлеченных сущностей типа OBJECT
+        multivalued: true
+        range: Object
+      interface_list:
+        description: Список извлеченных сущностей типа INTERFACE
+        multivalued: true
+        range: Interface
+      dialog_list:
+        description: Список извлеченных сущностей типа DIALOG
+        multivalued: true
+        range: Dialog
+      button_list:
+        description: Список извлеченных сущностей типа BUTTON
+        multivalued: true
+        range: Button
+      useraction_list:
+        description: Список извлеченных сущностей типа USER ACTION
+        multivalued: true
+        range: UserAction
+      geometry_list:
+        description: Список извлеченных сущностей типа GEOMETRY
+        multivalued: true
+        range: Geometry
+      curve_list:
+        description: Список извлеченных сущностей типа CURVE
+        multivalued: true
+        range: Curve
+      assembly_list:
+        description: Список извлеченных сущностей типа ASSEMBLY
+        multivalued: true
+        range: Assembly
+      model_list:
+        description: Список извлеченных сущностей типа MODEL
+        multivalued: true
+        range: Model
+      variable_list:
+        description: Список извлеченных сущностей типа VARIABLE
+        multivalued: true
+        range: Variable
+      comment_list:
+        description: Список извлеченных сущностей типа COMMENT
+        multivalued: true
+        range: Comment
+      visibility_list:
+        description: Список извлеченных сущностей типа VISIBILITY
+        multivalued: true
+        range: Visibility
+      relationship_list:
+        description: Список извлеченных сущностей типа RELATIONSHIP
+        multivalued: true
+        range: Relationship
+      errormarking_list:
+        description: Список извлеченных сущностей типа ERROR MARKING
+        multivalued: true
+        range: ErrorMarking
+      navigation_list:
+        description: Список извлеченных сущностей типа NAVIGATION
+        multivalued: true
+        range: Navigation
+      surface_list:
+        description: Список извлеченных сущностей типа SURFACE
+        multivalued: true
+        range: Surface
+      transformation_list:
+        description: Список извлеченных сущностей типа TRANSFORMATION
+        multivalued: true
+        range: Transformation
+      texture_list:
+        description: Список извлеченных сущностей типа TEXTURE
+        multivalued: true
+        range: Texture
+      dimension_list:
+        description: Список извлеченных сущностей типа DIMENSION
+        multivalued: true
+        range: Dimension
+      point_list:
+        description: Список извлеченных сущностей типа POINT
+        multivalued: true
+        range: Point
+      menu_list:
+        description: Список извлеченных сущностей типа MENU
+        multivalued: true
+        range: Menu
+      key_list:
+        description: Список извлеченных сущностей типа KEY
+        multivalued: true
+        range: Key
+      file_list:
+        description: Список извлеченных сущностей типа FILE
+        multivalued: true
+        range: File
+      directory_list:
+        description: Список извлеченных сущностей типа DIRECTORY
+        multivalued: true
+        range: Directory
+      section_list:
+        description: Список извлеченных сущностей типа SECTION
+        multivalued: true
+        range: Section
+      image_list:
+        description: Список извлеченных сущностей типа IMAGE
+        multivalued: true
+        range: Image
+      panel_yavlyaetsya_odnim_list:
+        description: Список извлеченных отношений panel_yavlyaetsya_odnim
+        multivalued: true
+        range: PanelYavlyaetsyaOdnimRelationship
+      sposob_postroeniya_dugi_list:
+        description: Список извлеченных отношений sposob_postroeniya_dugi
+        multivalued: true
+        range: SposobPostroeniyaDugiRelationship
+      sposob_postroeniya_okruzhnosti_list:
+        description: Список извлеченных отношений sposob_postroeniya_okruzhnosti
+        multivalued: true
+        range: SposobPostroeniyaOkruzhnostiRelationship
+      vybor_sposoba_postroeniya_list:
+        description: Список извлеченных отношений vybor_sposoba_postroeniya
+        multivalued: true
+        range: VyborSposobaPostroeniyaRelationship
+      obe_komandy_otnosyatsya_list:
+        description: Список извлеченных отношений obe_komandy_otnosyatsya
+        multivalued: true
+        range: ObeKomandyOtnosyatsyaRelationship
+      posle_zapuska_komandy_list:
+        description: Список извлеченных отношений posle_zapuska_komandy
+        multivalued: true
+        range: PosleZapuskaKomandyRelationship
+      tochka_ispolzuetsya_zadaniya_list:
+        description: Список извлеченных отношений tochka_ispolzuetsya_zadaniya
+        multivalued: true
+        range: TochkaIspolzuetsyaZadaniyaRelationship
+      elementy_sborki_mogut_list:
+        description: Список извлеченных отношений elementy_sborki_mogut
+        multivalued: true
+        range: ElementySborkiMogutRelationship
+      komanda_sechenie_poverkhnostyu_list:
+        description: Список извлеченных отношений komanda_sechenie_poverkhnostyu
+        multivalued: true
+        range: KomandaSecheniePoverkhnostyuRelationship
+      knopka_dialoge_parametrov_list:
+        description: Список извлеченных отношений knopka_dialoge_parametrov
+        multivalued: true
+        range: KnopkaDialogeParametrovRelationship
+      os_zadaetsya_rezhime_list:
+        description: Список извлеченных отношений os_zadaetsya_rezhime
+        multivalued: true
+        range: OsZadaetsyaRezhimeRelationship
+      tsentr_zadaetsya_rezhime_list:
+        description: Список извлеченных отношений tsentr_zadaetsya_rezhime
+        multivalued: true
+        range: TsentrZadaetsyaRezhimeRelationship
+      otrezok_ispolzuetsya_zadaniya_list:
+        description: Список извлеченных отношений otrezok_ispolzuetsya_zadaniya
+        multivalued: true
+        range: OtrezokIspolzuetsyaZadaniyaRelationship
+      vkladka_peremennye_list:
+        description: Список извлеченных отношений vkladka_peremennye
+        multivalued: true
+        range: VkladkaPeremennyeRelationship
+      pole_vvoda_ugla_list:
+        description: Список извлеченных отношений pole_vvoda_ugla
+        multivalued: true
+        range: PoleVvodaUglaRelationship
+      flag_assotsiativno_aktiviruet_list:
+        description: Список извлеченных отношений flag_assotsiativno_aktiviruet
+        multivalued: true
+        range: FlagAssotsiativnoAktiviruetRelationship
+      iskhodnye_krivye_mogut_list:
+        description: Список извлеченных отношений iskhodnye_krivye_mogut
+        multivalued: true
+        range: IskhodnyeKrivyeMogutRelationship
+  Command:
+    is_a: NamedEntity
+    description: Сущности типа COMMAND из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Entity3dScene:
+    is_a: NamedEntity
+    description: Сущности типа 3D SCENE из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Tool:
+    is_a: NamedEntity
+    description: Сущности типа TOOL из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Parameter:
+    is_a: NamedEntity
+    description: Сущности типа PARAMETER из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Object:
+    is_a: NamedEntity
+    description: Сущности типа OBJECT из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Interface:
+    is_a: NamedEntity
+    description: Сущности типа INTERFACE из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Dialog:
+    is_a: NamedEntity
+    description: Сущности типа DIALOG из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Button:
+    is_a: NamedEntity
+    description: Сущности типа BUTTON из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  UserAction:
+    is_a: NamedEntity
+    description: Сущности типа USER ACTION из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Geometry:
+    is_a: NamedEntity
+    description: Сущности типа GEOMETRY из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Curve:
+    is_a: NamedEntity
+    description: Сущности типа CURVE из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Assembly:
+    is_a: NamedEntity
+    description: Сущности типа ASSEMBLY из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Model:
+    is_a: NamedEntity
+    description: Сущности типа MODEL из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Variable:
+    is_a: NamedEntity
+    description: Сущности типа VARIABLE из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Comment:
+    is_a: NamedEntity
+    description: Сущности типа COMMENT из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Visibility:
+    is_a: NamedEntity
+    description: Сущности типа VISIBILITY из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Relationship:
+    is_a: NamedEntity
+    description: Сущности типа RELATIONSHIP из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  ErrorMarking:
+    is_a: NamedEntity
+    description: Сущности типа ERROR MARKING из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Navigation:
+    is_a: NamedEntity
+    description: Сущности типа NAVIGATION из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Surface:
+    is_a: NamedEntity
+    description: Сущности типа SURFACE из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Transformation:
+    is_a: NamedEntity
+    description: Сущности типа TRANSFORMATION из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Texture:
+    is_a: NamedEntity
+    description: Сущности типа TEXTURE из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Dimension:
+    is_a: NamedEntity
+    description: Сущности типа DIMENSION из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Point:
+    is_a: NamedEntity
+    description: Сущности типа POINT из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Menu:
+    is_a: NamedEntity
+    description: Сущности типа MENU из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Key:
+    is_a: NamedEntity
+    description: Сущности типа KEY из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  File:
+    is_a: NamedEntity
+    description: Сущности типа FILE из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Directory:
+    is_a: NamedEntity
+    description: Сущности типа DIRECTORY из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Section:
+    is_a: NamedEntity
+    description: Сущности типа SECTION из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  Image:
+    is_a: NamedEntity
+    description: Сущности типа IMAGE из CAD системы
+    id_prefixes:
+    - CAD
+    attributes:
+      label:
+        description: Название сущности
+        slot_uri: rdfs:label
+      description:
+        description: Описание сущности
+        slot_uri: schema:description
+    annotations:
+      annotators: sqlite:obo:mesh
+  PanelYavlyaetsyaOdnimRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Панель является одним из типов инструментальных панелей,
+      используемых в CAD'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Панель является одним из типов инструментальных панелей, используемых
+          в CAD
+        range: string
+  SposobPostroeniyaDugiRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Способ построения дуги окружности выбирается из выпадающего
+      списка под пиктограммой команды'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Способ построения дуги окружности выбирается из выпадающего списка
+          под пиктограммой команды
+        range: string
+  SposobPostroeniyaOkruzhnostiRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Способ построения окружности выбирается из выпадающего
+      списка под пиктограммой команды'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Способ построения окружности выбирается из выпадающего списка
+          под пиктограммой команды
+        range: string
+  VyborSposobaPostroeniyaRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Выбор способа построения дуги окружности осуществляется
+      в диалоге параметров команды'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Выбор способа построения дуги окружности осуществляется в диалоге
+          параметров команды
+        range: string
+  ObeKomandyOtnosyatsyaRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Обе команды относятся к процессу копирования 2D-объектов
+      в CAD'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Обе команды относятся к процессу копирования 2D-объектов в CAD
+        range: string
+  PosleZapuskaKomandyRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: После запуска команды открывается диалог параметров для
+      настройки создания поверхности'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: После запуска команды открывается диалог параметров для настройки
+          создания поверхности
+        range: string
+  TochkaIspolzuetsyaZadaniyaRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Точка 1 используется для задания положения системы координат
+      в режиме «Система координат по трём точкам»'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Точка 1 используется для задания положения системы координат
+          в режиме «Система координат по трём точкам»
+        range: string
+  ElementySborkiMogutRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Элементы сборки могут быть добавлены в электронную структуру.'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Элементы сборки могут быть добавлены в электронную структуру.
+        range: string
+  KomandaSecheniePoverkhnostyuRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Команда «Сечение поверхностью» вызывается из выпадающего
+      списка на панели «Лента»'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Команда «Сечение поверхностью» вызывается из выпадающего списка
+          на панели «Лента»
+        range: string
+  KnopkaDialogeParametrovRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Кнопка в диалоге параметров предназначена для отображения
+      списка свободных букв'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Кнопка в диалоге параметров предназначена для отображения списка
+          свободных букв
+        range: string
+  OsZadaetsyaRezhimeRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Ось задается в режиме «СК по параметрам»'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Ось задается в режиме «СК по параметрам»
+        range: string
+  TsentrZadaetsyaRezhimeRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Центр СК задается в режиме «СК по параметрам»'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Центр СК задается в режиме «СК по параметрам»
+        range: string
+  OtrezokIspolzuetsyaZadaniyaRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Отрезок 2 используется для задания направления оси Y
+      в режиме «Система координат по двум прямым»'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Отрезок 2 используется для задания направления оси Y в режиме
+          «Система координат по двум прямым»
+        range: string
+  VkladkaPeremennyeRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Вкладка «Переменные» появляется на панели «Лента» при
+      открытии редактора переменных'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Вкладка «Переменные» появляется на панели «Лента» при открытии
+          редактора переменных
+        range: string
+  PoleVvodaUglaRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Поле ввода угла используется для задания угла касательной
+      дуги'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Поле ввода угла используется для задания угла касательной дуги
+        range: string
+  FlagAssotsiativnoAktiviruetRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Флаг «Ассоциативно» активирует связь между исходной кривой
+      и полученной'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Флаг «Ассоциативно» активирует связь между исходной кривой и
+          полученной
+        range: string
+  IskhodnyeKrivyeMogutRelationship:
+    is_a: CompoundExpression
+    description: 'Отношение: Исходные кривые могут включать кривые, которые будут
+      проецироваться на поверхности'
+    attributes:
+      source:
+        description: Исходная сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Первая сущность в отношении
+      target:
+        description: Целевая сущность отношения
+        range: NamedEntity
+        annotations:
+          prompt: Вторая сущность в отношении
+      relation_type:
+        description: Исходные кривые могут включать кривые, которые будут проецироваться
+          на поверхности
+        range: string
+slots:
+  label:
+    description: Название сущности
+    range: string
+    slot_uri: rdfs:label
+  description:
+    description: Описание сущности
+    range: string
+    slot_uri: schema:description
