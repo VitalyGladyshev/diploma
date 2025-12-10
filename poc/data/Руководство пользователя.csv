@@ -1,0 +1,2917 @@
+Header;Text;CleanText;HTML;Tables;Images;HTML_name
+1 Аннотация;"Руководство пользователя предназначено для описания процедуры взаимодействия пользователя с базовой и расширенной функциональностью программного модуля автоматизированного формирования конструктивной ЭСИ из электронных КД, разработанных в САПР Компас-3D (далее по тексту – программный модуль «Интегратор Компас») в процессе его выполнения.
+
+В руководстве пользователя приведены:
+
+1. назначение программного модуля;
+
+
+2. условия выполнения программного модуля;
+
+
+3. запуск программного модуля;
+
+
+4. выполнение программного модуля;
+
+
+5. завершение программы;
+
+
+6. сообщения пользователю.
+
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>1 Аннотация</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>1 Аннотация</h1>
+<p>Руководство пользователя предназначено для описания процедуры взаимодействия пользователя с базовой и расширенной функциональностью программного модуля автоматизированного формирования конструктивной ЭСИ из электронных КД, разработанных в САПР Компас-3D (далее по тексту – программный модуль «Интегратор Компас») в процессе его выполнения.</p>
+<p>В руководстве пользователя приведены:</p>
+<p>1. назначение программного модуля;</p>
+<p>
+2. условия выполнения программного модуля;</p>
+<p>
+3. запуск программного модуля;</p>
+<p>
+4. выполнение программного модуля;</p>
+<p>
+5. завершение программы;</p>
+<p>
+6. сообщения пользователю.</p>
+
+    </div>
+</body>
+</html>";[];[];58c2a43a-66db-42a7-a3ca-35ae28ccef21.html
+2 Назначение программного модуля;"Программный модуль «Интегратор Компас» предназначен для обеспечения реализации следующих функциональных возможностей:
+
+1. определение компонентного состава сборочной модели САПР Компас-3D;
+
+
+2. сохранение состава сборочной модели САПР в файл в текстовом формате (*.json, xml);
+
+
+3. передача сведений о составе сборочной модели с использованием специализированных библиотек в СПЖЦ.PDM;
+
+
+4. обновление данных о компонентном составе сборочной модели в СПЖЦ.PDM;
+
+
+5. возможность управления функциями программного модуля «Интегратор Компас» (открытие компонента из БД СПЖЦ.PDM, сохранение компонента в ЭСИ СПЖЦ.PDM, обновление данных в СПЖЦ.PDM при изменении параметров сборочной модели в САПР Компас-3D).
+
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>2 Назначение программного модуля</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>2 Назначение программного модуля</h1>
+<p>Программный модуль «Интегратор Компас» предназначен для обеспечения реализации следующих функциональных возможностей:</p>
+<p>1. определение компонентного состава сборочной модели САПР Компас-3D;</p>
+<p>
+2. сохранение состава сборочной модели САПР в файл в текстовом формате (*.json, xml);</p>
+<p>
+3. передача сведений о составе сборочной модели с использованием специализированных библиотек в СПЖЦ.PDM;</p>
+<p>
+4. обновление данных о компонентном составе сборочной модели в СПЖЦ.PDM;</p>
+<p>
+5. возможность управления функциями программного модуля «Интегратор Компас» (открытие компонента из БД СПЖЦ.PDM, сохранение компонента в ЭСИ СПЖЦ.PDM, обновление данных в СПЖЦ.PDM при изменении параметров сборочной модели в САПР Компас-3D).</p>
+
+    </div>
+</body>
+</html>";[];[];acf33dc1-4cb0-43d8-9b7f-72b634f588fb.html
+3 Условия выполнения программного модуля;"Достаточными условиями выполнения программного модуля «Интегратор Компас» являются следующие системные требования:
+
+1. ПК в составе:
+
+
+• процессор Intel Core i3 или выше;
+
+
+• ОЗУ 2,0 ГБ и более;
+
+
+• видеокарта NVIDIA или AMD с памятью 1,0 ГБ и выше;
+
+
+• объем свободного пространства на жестком диске, необходимого для установки, – 1,0 ГБ и выше;
+
+
+• монитор, обеспечивающий установку разрешения экрана не менее 1280×960 пикселей;
+
+
+• клавиатура;
+
+
+• манипулятор «мышь»;
+
+
+2. ПО в составе:
+
+
+• ОС – Windows версии 10 и выше;
+
+
+• ПО Компас-3D (не ниже версии 18.1);
+
+
+• программный модуль «Интегратор Компас».
+
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>3 Условия выполнения программного модуля</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>3 Условия выполнения программного модуля</h1>
+<p>Достаточными условиями выполнения программного модуля «Интегратор Компас» являются следующие системные требования:</p>
+<p>1. ПК в составе:</p>
+<p>
+• процессор Intel Core i3 или выше;</p>
+<p>
+• ОЗУ 2,0 ГБ и более;</p>
+<p>
+• видеокарта NVIDIA или AMD с памятью 1,0 ГБ и выше;</p>
+<p>
+• объем свободного пространства на жестком диске, необходимого для установки, – 1,0 ГБ и выше;</p>
+<p>
+• монитор, обеспечивающий установку разрешения экрана не менее 1280×960 пикселей;</p>
+<p>
+• клавиатура;</p>
+<p>
+• манипулятор «мышь»;</p>
+<p>
+2. ПО в составе:</p>
+<p>
+• ОС – Windows версии 10 и выше;</p>
+<p>
+• ПО Компас-3D (не ниже версии 18.1);</p>
+<p>
+• программный модуль «Интегратор Компас».</p>
+
+    </div>
+</body>
+</html>";[];[];4227cd36-6da1-472a-847f-bfe0c4d7d2fc.html
+4.1 Предварительная настройка программного модуля «Интегратор Компас»;"До первого запуска необходимо выполнить первоначальную настройку программного модуля «Интегратор Компас». Настройки содержатся в файле «settings.json» в папке установки программного модуля «Интегратор Компас» (рис. 1).
+
+Файл настройки программного модуля «Интегратор Компас»
+
+
+[Изображение 1: ]
+
+Перечень и назначение опций:
+
+• «WorkfolderPath»: определяет путь к рабочей папке пользователя (место сохранения файлов на локальном диске). Рекомендуется использовать папки, привязанные к профилю пользователя, не имеющих ограничений по доступу;
+
+
+• 
+
+
+«AppServerAddress»: адрес и порт сервера приложений. Значение по умолчанию -
+
+http://localhost:35000
+
+.
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>4.1 Предварительная настройка программного модуля «Интегратор Компас»</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>4.1 Предварительная настройка программного модуля «Интегратор Компас»</h1>
+<p>До первого запуска необходимо выполнить первоначальную настройку программного модуля «Интегратор Компас». Настройки содержатся в файле «settings.json» в папке установки программного модуля «Интегратор Компас» (рис. 1).</p>
+<p>Файл настройки программного модуля «Интегратор Компас»</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_1.png"" alt="""">
+</div>
+<p>Перечень и назначение опций:</p>
+<p>• «WorkfolderPath»: определяет путь к рабочей папке пользователя (место сохранения файлов на локальном диске). Рекомендуется использовать папки, привязанные к профилю пользователя, не имеющих ограничений по доступу;</p>
+<p>
+• </p>
+<p>
+«AppServerAddress»: адрес и порт сервера приложений. Значение по умолчанию -</p>
+<p>http://localhost:35000</p>
+<p>.</p>
+
+    </div>
+</body>
+</html>";[];[{'id': 1, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_1.png'), 'type': 'image'}];fdd5a576-630b-4510-b9c5-28f4b65cb665.html
+5.1 Главное окно и интерфейс программного модуля «Интегратор Компас»;"Открыть САРУС и авторизироваться под пользователем. При открытии справочника «Электронная структура изделий» на Ленте отображаются команды программного модуля «Интегратор Компас» (рис. 2).
+
+Команды программного модуля «Интегратор Компас».
+
+
+[Изображение 2: ]
+
+Необходимо нажать на кнопку «Сохранить в САРУС». При подключении запрашивается авторизация, в открывшемся диалоговом окне пользователю необходимо ввести логин и пароль. Затем нажать на кнопку «Подключение» (рис. 3).
+
+Авторизация при запуске
+
+
+[Изображение 3: ]
+
+В случае успешного запуска программный модуль «Интегратор Компас» подключается к
+
+запущенному
+
+в системе приложению Компас-3D. В случае, если приложение не обнаружено выводится соответствующее сообщение об ошибке (рис. 4).
+
+Ошибка при закрытом САПР Компас
+
+
+[Изображение 4: ]
+
+В случае успешного запуска программы на рабочем столе будет отображено главное окно программного модуля «Интегратор Компас» (рис. 5).
+
+Главное окно программного модуля «Интегратор Компас»
+
+
+[Изображение 5: ]
+
+В левой части окна отображается состав сборочной модели, полученный из Компас-3D (рис. 6).
+
+Отображение структуры сборочной модели Компас-3D
+
+
+[Изображение 6: ]
+
+В правой части окна отображается состав информационных объектов СПЖЦ.PDM (рис. 7).
+
+Отображение состава информационных объектов СПЖЦ.PDM
+
+
+[Изображение 7: ]
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.1 Главное окно и интерфейс программного модуля «Интегратор Компас»</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.1 Главное окно и интерфейс программного модуля «Интегратор Компас»</h1>
+<p>Открыть САРУС и авторизироваться под пользователем. При открытии справочника «Электронная структура изделий» на Ленте отображаются команды программного модуля «Интегратор Компас» (рис. 2).</p>
+<p>Команды программного модуля «Интегратор Компас».</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_2.png"" alt="""">
+</div>
+<p>Необходимо нажать на кнопку «Сохранить в САРУС». При подключении запрашивается авторизация, в открывшемся диалоговом окне пользователю необходимо ввести логин и пароль. Затем нажать на кнопку «Подключение» (рис. 3).</p>
+<p>Авторизация при запуске</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_3.png"" alt="""">
+</div>
+<p>В случае успешного запуска программный модуль «Интегратор Компас» подключается к</p>
+<p>запущенному</p>
+<p>в системе приложению Компас-3D. В случае, если приложение не обнаружено выводится соответствующее сообщение об ошибке (рис. 4).</p>
+<p>Ошибка при закрытом САПР Компас</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_4.png"" alt="""">
+</div>
+<p>В случае успешного запуска программы на рабочем столе будет отображено главное окно программного модуля «Интегратор Компас» (рис. 5).</p>
+<p>Главное окно программного модуля «Интегратор Компас»</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_5.png"" alt="""">
+</div>
+<p>В левой части окна отображается состав сборочной модели, полученный из Компас-3D (рис. 6).</p>
+<p>Отображение структуры сборочной модели Компас-3D</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_6.png"" alt="""">
+</div>
+<p>В правой части окна отображается состав информационных объектов СПЖЦ.PDM (рис. 7).</p>
+<p>Отображение состава информационных объектов СПЖЦ.PDM</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_7.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 2, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_2.png'), 'type': 'image'}, {'id': 3, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_3.png'), 'type': 'image'}, {'id': 4, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_4.png'), 'type': 'image'}, {'id': 5, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_5.png'), 'type': 'image'}, {'id': 6, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_6.png'), 'type': 'image'}, {'id': 7, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_7.png'), 'type': 'image'}];3edbd2af-2253-47c8-9b15-b73ffc490712.html
+5.1.1 Интерфейс главного окна программного модуля «Интегратор Компас»;"Интерфейс главного окна программного модуля «Интегратор Компас» приведен на рис. 5.
+
+«Сохранить ЭСИ в САРУС» – кнопка, обеспечивающая возможность сохранения состава сборочной модели САПР Компас-3D посредством создания объектов в БД системы RPLM.
+
+«Отменить изменения» – кнопка, отменяет созданные изменения в БД системы RPLM.
+
+«Принять изменения к ЭСИ» – кнопка, применяет созданные изменения в БД системы RPLM.
+
+
+[Изображение 8: ]
+
+«Обновить ЭСИ» – кнопка, производит обновление отображения дерева ЭСИ (в правой части формы).
+
+«Сохранить ЭCИ в файл формате xml» – кнопка, создает файл формата XML со структурированным составом сборочной модели Компас-3D.
+
+«Сохранить ЭCИ в файл формате JSON» – кнопка, создает файл формата JSON со структурированным составом сборочной модели Компас-3D.
+
+
+[Изображение 9: ]
+
+«Считывание параметров элемента сборки» – кнопка, расположенная под областью «Структура сборки в Компас-3D», производит считывание параметров объектов состава сборочной модели Компас-3D (в левой части формы), осуществляет проверку соответствия материалов из справочника САРУС.
+
+
+[Изображение 10: ]
+
+«Открыть» - кнопка, открывает диалоговое окно выбора файла для определения компонентного состава сборочной модели САПР Компас-3D.
+
+
+[Изображение 11: ]
+
+«Добавить элемент сборки ЭСИ» – кнопка добавляет выделенный элемент из дерева сборки (в левой части окна) в дерево ЭСИ (в правой части окна) при выделении в дереве ЭСИ элемента, корневого элемента, позволяющего добавлять в дерево дочерние элементы, добавляемый элемент сборки будет добавлен как дочерний по отношению к выбранному.
+
+
+[Изображение 12: ]
+
+«Показать легенду» – кнопка, открывает информационное окно легенды цветовой индикации измененных элементов сборки.
+
+«Папка для файлов:» – область выбора папки из справочника «Файлы» для сохранения файлов Компас-3D текущей сборки (рис. 8).
+
+Область выбора папки для хранения файлов
+
+
+[Изображение 13: ]
+
+Пользователь нажатием ЛКМ в области «Папка для файлов:» открывает диалоговое окно с древовидным отображением существующих папок в справочнике «Файлы» для выбора (рис. 9).
+
+Выбор папки сохранения файлов
+
+
+[Изображение 14: ]
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.1.1 Интерфейс главного окна программного модуля «Интегратор Компас»</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.1.1 Интерфейс главного окна программного модуля «Интегратор Компас»</h1>
+<p>Интерфейс главного окна программного модуля «Интегратор Компас» приведен на рис. 5.</p>
+<p>«Сохранить ЭСИ в САРУС» – кнопка, обеспечивающая возможность сохранения состава сборочной модели САПР Компас-3D посредством создания объектов в БД системы RPLM.</p>
+<p>«Отменить изменения» – кнопка, отменяет созданные изменения в БД системы RPLM.</p>
+<p>«Принять изменения к ЭСИ» – кнопка, применяет созданные изменения в БД системы RPLM.</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_8.png"" alt="""">
+</div>
+<p>«Обновить ЭСИ» – кнопка, производит обновление отображения дерева ЭСИ (в правой части формы).</p>
+<p>«Сохранить ЭCИ в файл формате xml» – кнопка, создает файл формата XML со структурированным составом сборочной модели Компас-3D.</p>
+<p>«Сохранить ЭCИ в файл формате JSON» – кнопка, создает файл формата JSON со структурированным составом сборочной модели Компас-3D.</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_9.png"" alt="""">
+</div>
+<p>«Считывание параметров элемента сборки» – кнопка, расположенная под областью «Структура сборки в Компас-3D», производит считывание параметров объектов состава сборочной модели Компас-3D (в левой части формы), осуществляет проверку соответствия материалов из справочника САРУС.</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_10.png"" alt="""">
+</div>
+<p>«Открыть» - кнопка, открывает диалоговое окно выбора файла для определения компонентного состава сборочной модели САПР Компас-3D.</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_11.png"" alt="""">
+</div>
+<p>«Добавить элемент сборки ЭСИ» – кнопка добавляет выделенный элемент из дерева сборки (в левой части окна) в дерево ЭСИ (в правой части окна) при выделении в дереве ЭСИ элемента, корневого элемента, позволяющего добавлять в дерево дочерние элементы, добавляемый элемент сборки будет добавлен как дочерний по отношению к выбранному.</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_12.png"" alt="""">
+</div>
+<p>«Показать легенду» – кнопка, открывает информационное окно легенды цветовой индикации измененных элементов сборки.</p>
+<p>«Папка для файлов:» – область выбора папки из справочника «Файлы» для сохранения файлов Компас-3D текущей сборки (рис. 8).</p>
+<p>Область выбора папки для хранения файлов</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_13.png"" alt="""">
+</div>
+<p>Пользователь нажатием ЛКМ в области «Папка для файлов:» открывает диалоговое окно с древовидным отображением существующих папок в справочнике «Файлы» для выбора (рис. 9).</p>
+<p>Выбор папки сохранения файлов</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_14.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 8, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_8.png'), 'type': 'image'}, {'id': 9, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_9.png'), 'type': 'image'}, {'id': 10, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_10.png'), 'type': 'image'}, {'id': 11, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_11.png'), 'type': 'image'}, {'id': 12, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_12.png'), 'type': 'image'}, {'id': 13, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_13.png'), 'type': 'image'}, {'id': 14, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_14.png'), 'type': 'image'}];6a15fdd3-838c-4f5d-ab49-4090e83f2a05.html
+5.2 Формирование состава изделия со спецификации;"Пользователь открывает спецификацию в ПО Компас (рис. 10) и запускает команду «Сохранить в САРУС» (см. рис. 2) (подробное описание в разделе 4.1).
+
+
+[Изображение 15: ]
+
+Спецификация
+
+Текущий пользователь проходит авторизацию, и в окне «Интегратор Компас» отображается считанная с файла структура сборочной модели (рис. 11).
+
+Структура со спецификации
+
+
+[Изображение 16: ]
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.2 Формирование состава изделия со спецификации</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.2 Формирование состава изделия со спецификации</h1>
+<p>Пользователь открывает спецификацию в ПО Компас (рис. 10) и запускает команду «Сохранить в САРУС» (см. рис. 2) (подробное описание в разделе 4.1).</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_15.png"" alt="""">
+</div>
+<p>Спецификация</p>
+<p>Текущий пользователь проходит авторизацию, и в окне «Интегратор Компас» отображается считанная с файла структура сборочной модели (рис. 11).</p>
+<p>Структура со спецификации</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_16.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 15, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_15.png'), 'type': 'image'}, {'id': 16, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_16.png'), 'type': 'image'}];a580ffb2-7ef1-4d4a-918d-71e763d9e2e9.html
+5.2.1 Отображение входящих в состав сборки документов и материалов;"
+[Изображение 17: ]
+
+Пользователь нажимает на кнопку «Считывание параметров элемента сборки» , расположенную под областью «Структура сборки в Компас-3D». Описание механизма проверки целостности материалов справочника подробнее описано в подразделе 4.4.1.  Ход процесса получения данных отображается в соответствующих элементах главного окна программы (рис. 12).
+
+Отображение хода выполнения операции
+
+
+[Изображение 18: ]
+
+
+[Изображение 19: ]
+
+По завершению процесса в левой части окна, при раскрытии вложенности, отображены считанные параметры каждого элемента. При совпадении и идентичности объекта модели с объектом в БД системы RPLM рядом с параметром «Обозначение» проставляется соответствующая иконка (рис. 13).
+
+Отображение считанных параметров
+
+
+[Изображение 20: ]
+
+
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.2.1 Отображение входящих в состав сборки документов и материалов</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.2.1 Отображение входящих в состав сборки документов и материалов</h1>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_17.png"" alt="""">
+</div>
+<p>Пользователь нажимает на кнопку «Считывание параметров элемента сборки» , расположенную под областью «Структура сборки в Компас-3D». Описание механизма проверки целостности материалов справочника подробнее описано в подразделе 4.4.1.  Ход процесса получения данных отображается в соответствующих элементах главного окна программы (рис. 12).</p>
+<p>Отображение хода выполнения операции</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_18.png"" alt="""">
+</div>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_19.png"" alt="""">
+</div>
+<p>По завершению процесса в левой части окна, при раскрытии вложенности, отображены считанные параметры каждого элемента. При совпадении и идентичности объекта модели с объектом в БД системы RPLM рядом с параметром «Обозначение» проставляется соответствующая иконка (рис. 13).</p>
+<p>Отображение считанных параметров</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_20.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 17, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_17.png'), 'type': 'image'}, {'id': 18, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_18.png'), 'type': 'image'}, {'id': 19, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_19.png'), 'type': 'image'}, {'id': 20, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_20.png'), 'type': 'image'}];a078f027-39ad-4e19-8647-53b3a0195f55.html
+5.2.2 Сохранение структуры сборочной модели в RPLM;"Состав сборочной модели может переноситься в состав информационных объектов СПЖЦ.PDM в соответствии с требованиями по входимости.
+
+
+[Изображение 21: ]
+
+В случае, когда выбранная сборочная модель является составной частью другой сборки, необходимо выбрать головной объект в списке слева, затем выбрать элемент дерева ЭСИ, к которому будет привязан состав (рис. 14) и нажать на кнопку переноса .  Описание механизма проверки целостности стандартных изделий подробнее описано в подразделе 4.4.2.
+
+Выбор объекта справочника ЭСИ для сохранения состава сборочной модели
+
+
+[Изображение 22: ]
+
+В открывшемся диалоговом окне ввода количества (рис. 15) пользователю подсвечивается название выбранного объекта и название объекта вставки, а также представляется возможность ввести количество вхождений.
+
+Ввод количества вхождений
+
+
+[Изображение 23: ]
+
+
+
+После подтверждения кнопкой «Вставить» структура добавленной сборочной модели отображается в дереве ЭСИ (панель справа), новые элементы создаваемой структуры выделяются цветом (рис. 16).
+
+Отображение состава сохраняемой ЭСИ
+
+
+[Изображение 24: ]
+
+
+
+
+[Изображение 25: ]
+
+В случае ошибочного подключения структуры сборочной модели в ЭСИ пользователю необходимо нажать кнопку   «Обновить ЭСИ» для обновления параметров дерева ЭСИ (в правой части формы) и затем повторить описанные выше шаги по выбору объекта справочника ЭСИ для сохранения состава сборочной модели.
+
+Для сохранения структуры в БД необходимо нажать на кнопку «Сохранить ЭСИ в САРУС».
+
+Ход процесса сохранения и процент выполнения операции отображаются в соответствующих элементах главного окна программы (рис. 17).
+
+Отображение хода выполнения операции
+
+
+[Изображение 26: ]
+
+По завершении операции пользователю выводится информационное сообщение (рис. 18).
+
+Сообщение об успешном выполнении операции
+
+
+[Изображение 27: ]
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.2.2 Сохранение структуры сборочной модели в RPLM</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.2.2 Сохранение структуры сборочной модели в RPLM</h1>
+<p>Состав сборочной модели может переноситься в состав информационных объектов СПЖЦ.PDM в соответствии с требованиями по входимости.</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_21.png"" alt="""">
+</div>
+<p>В случае, когда выбранная сборочная модель является составной частью другой сборки, необходимо выбрать головной объект в списке слева, затем выбрать элемент дерева ЭСИ, к которому будет привязан состав (рис. 14) и нажать на кнопку переноса .  Описание механизма проверки целостности стандартных изделий подробнее описано в подразделе 4.4.2.</p>
+<p>Выбор объекта справочника ЭСИ для сохранения состава сборочной модели</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_22.png"" alt="""">
+</div>
+<p>В открывшемся диалоговом окне ввода количества (рис. 15) пользователю подсвечивается название выбранного объекта и название объекта вставки, а также представляется возможность ввести количество вхождений.</p>
+<p>Ввод количества вхождений</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_23.png"" alt="""">
+</div>
+<p>После подтверждения кнопкой «Вставить» структура добавленной сборочной модели отображается в дереве ЭСИ (панель справа), новые элементы создаваемой структуры выделяются цветом (рис. 16).</p>
+<p>Отображение состава сохраняемой ЭСИ</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_24.png"" alt="""">
+</div>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_25.png"" alt="""">
+</div>
+<p>В случае ошибочного подключения структуры сборочной модели в ЭСИ пользователю необходимо нажать кнопку   «Обновить ЭСИ» для обновления параметров дерева ЭСИ (в правой части формы) и затем повторить описанные выше шаги по выбору объекта справочника ЭСИ для сохранения состава сборочной модели.</p>
+<p>Для сохранения структуры в БД необходимо нажать на кнопку «Сохранить ЭСИ в САРУС».</p>
+<p>Ход процесса сохранения и процент выполнения операции отображаются в соответствующих элементах главного окна программы (рис. 17).</p>
+<p>Отображение хода выполнения операции</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_26.png"" alt="""">
+</div>
+<p>По завершении операции пользователю выводится информационное сообщение (рис. 18).</p>
+<p>Сообщение об успешном выполнении операции</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_27.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 21, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_21.png'), 'type': 'image'}, {'id': 22, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_22.png'), 'type': 'image'}, {'id': 23, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_23.png'), 'type': 'image'}, {'id': 24, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_24.png'), 'type': 'image'}, {'id': 25, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_25.png'), 'type': 'image'}, {'id': 26, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_26.png'), 'type': 'image'}, {'id': 27, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_27.png'), 'type': 'image'}];19dd49f2-ed63-47d5-b4e6-e68282846925.html
+5.2.3 Результат выполнения операции сохранения ЭСИ;"В результате выполнения операции создаются объекты справочника ЭСИ. Соответствующие им файлы компонентов создаются в справочнике «Файлы» (рис. 19), а также создаются связи между объектом ЭСИ и файлом. Связь с материалом объекта отображается на вкладке «Материал», на панели «Свойства» (рис. 20).
+
+Результат сохранения файлов Компас в справочнике «Файлы»
+
+
+[Изображение 28: ]
+
+Результат выполнения программы, отображенный в клиенте СПЖЦ.PDM
+
+
+[Изображение 29: ]
+
+Пользователь может применить созданные изменения и сохранить структуру, либо отменить изменения при помощи стандартных функций клиента САРУС.PDM, либо с помощью кнопок в окне модуля «Интегратор Компас».
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.2.3 Результат выполнения операции сохранения ЭСИ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.2.3 Результат выполнения операции сохранения ЭСИ</h1>
+<p>В результате выполнения операции создаются объекты справочника ЭСИ. Соответствующие им файлы компонентов создаются в справочнике «Файлы» (рис. 19), а также создаются связи между объектом ЭСИ и файлом. Связь с материалом объекта отображается на вкладке «Материал», на панели «Свойства» (рис. 20).</p>
+<p>Результат сохранения файлов Компас в справочнике «Файлы»</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_28.png"" alt="""">
+</div>
+<p>Результат выполнения программы, отображенный в клиенте СПЖЦ.PDM</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_29.png"" alt="""">
+</div>
+<p>Пользователь может применить созданные изменения и сохранить структуру, либо отменить изменения при помощи стандартных функций клиента САРУС.PDM, либо с помощью кнопок в окне модуля «Интегратор Компас».</p>
+
+    </div>
+</body>
+</html>";[];[{'id': 28, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_28.png'), 'type': 'image'}, {'id': 29, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_29.png'), 'type': 'image'}];538f779a-3c59-46e0-bd5f-a6814ef03781.html
+5.3 Формирование состава изделия со сборочной модели;"Пользователь открывает сборочную модель в ПО Компас и запускает команду «Сохранить в САРУС» (см. рис. 2) (подробное описание в разделе 4.1).  Проходит авторизацию под текущим пользователем, и в окне «Интегратор Компас» отображается считанная с файла структура сборочной модели.
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.3 Формирование состава изделия со сборочной модели</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.3 Формирование состава изделия со сборочной модели</h1>
+<p>Пользователь открывает сборочную модель в ПО Компас и запускает команду «Сохранить в САРУС» (см. рис. 2) (подробное описание в разделе 4.1).  Проходит авторизацию под текущим пользователем, и в окне «Интегратор Компас» отображается считанная с файла структура сборочной модели.</p>
+
+    </div>
+</body>
+</html>";[];[];67a4a18b-2275-4907-bf6b-0cfaa4fc2936.html
+5.3.1 Отображение входящих в состав сборки документов и материалов;"
+[Изображение 30: ]
+
+Пользователь нажимает на кнопку «Считывание параметров элемента сборки» , расположенную под областью «Структура сборки в Компас-3D». Описание механизма проверки целостности материалов справочника подробнее описано в подразделе 4.4.1.  Ход процесса получения данных отображается в соответствующих элементах главного окна программы (рис. 21).
+
+Отображение хода выполнения операции
+
+
+[Изображение 31: ]
+
+
+[Изображение 32: ]
+
+По завершению процесса в левой части окна, при раскрытии вложенности, отображены считанные параметры каждого элемента. При совпадении и идентичности объекта модели с объектом в БД системы RPLM рядом с параметром «Обозначение» проставляется соответствующая иконка (рис. 22).
+
+Отображение считанных параметров
+
+
+[Изображение 33: ]
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.3.1 Отображение входящих в состав сборки документов и материалов</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.3.1 Отображение входящих в состав сборки документов и материалов</h1>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_30.png"" alt="""">
+</div>
+<p>Пользователь нажимает на кнопку «Считывание параметров элемента сборки» , расположенную под областью «Структура сборки в Компас-3D». Описание механизма проверки целостности материалов справочника подробнее описано в подразделе 4.4.1.  Ход процесса получения данных отображается в соответствующих элементах главного окна программы (рис. 21).</p>
+<p>Отображение хода выполнения операции</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_31.png"" alt="""">
+</div>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_32.png"" alt="""">
+</div>
+<p>По завершению процесса в левой части окна, при раскрытии вложенности, отображены считанные параметры каждого элемента. При совпадении и идентичности объекта модели с объектом в БД системы RPLM рядом с параметром «Обозначение» проставляется соответствующая иконка (рис. 22).</p>
+<p>Отображение считанных параметров</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_33.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 30, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_30.png'), 'type': 'image'}, {'id': 31, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_31.png'), 'type': 'image'}, {'id': 32, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_32.png'), 'type': 'image'}, {'id': 33, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_33.png'), 'type': 'image'}];7d0a5ad2-12b3-4391-a38a-43d57e9ae187.html
+5.3.2 Сохранение структуры сборочной модели в RPLM;"Состав сборочной модели может переноситься в состав информационных объектов СПЖЦ.PDM в соответствии с требованиями по входимости.
+
+
+[Изображение 34: ]
+
+В случае, когда выбранная сборочная модель является составной частью другой сборки, необходимо выбрать головной объект в списке слева, затем выбрать элемент дерева ЭСИ, к которому будет привязан состав (рис. 23) и нажать на кнопку переноса . Описание механизма проверки целостности стандартных изделий подробнее описано в подразделе 4.4.2.
+
+Выбор объекта справочника ЭСИ для сохранения состава сборочной модели
+
+
+[Изображение 35: ]
+
+В открывшемся диалоговом окно ввода количества (рис. 24) пользователю подсвечивается название выбранного объекта и название объекта вставки, а также представляется возможность ввести количество вхождений.
+
+Ввод количества вхождений
+
+
+[Изображение 36: ]
+
+После подтверждения кнопкой «Вставить» структура добавленной сборочной модели отображается в дереве ЭСИ (панель справа), новые элементы создаваемой структуры выделяются цветом (рис. 25).
+
+Отображение состава сохраняемой ЭСИ
+
+
+[Изображение 37: ]
+
+
+[Изображение 38: ]
+
+В случае ошибочного подключения структуры сборочной модели в ЭСИ пользователю необходимо нажать кнопку   «Обновить ЭСИ» для обновления параметров дерева ЭСИ (в правой части формы) и затем повторить описанные выше шаги по выбору объекта справочника ЭСИ для сохранения состава сборочной модели.
+
+Для сохранения структуры в БД необходимо нажать на кнопку «Сохранить ЭСИ в САРУС».
+
+Ход процесса сохранения и процент выполнения операции отображаются в соответствующих элементах главного окна программы (рис. 26).
+
+Отображение хода выполнения операции
+
+
+[Изображение 39: ]
+
+По завершении операции пользователю выводится информационное сообщение (рис. 27).
+
+Сообщение об успешном выполнении операции
+
+
+[Изображение 40: ]
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.3.2 Сохранение структуры сборочной модели в RPLM</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.3.2 Сохранение структуры сборочной модели в RPLM</h1>
+<p>Состав сборочной модели может переноситься в состав информационных объектов СПЖЦ.PDM в соответствии с требованиями по входимости.</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_34.png"" alt="""">
+</div>
+<p>В случае, когда выбранная сборочная модель является составной частью другой сборки, необходимо выбрать головной объект в списке слева, затем выбрать элемент дерева ЭСИ, к которому будет привязан состав (рис. 23) и нажать на кнопку переноса . Описание механизма проверки целостности стандартных изделий подробнее описано в подразделе 4.4.2.</p>
+<p>Выбор объекта справочника ЭСИ для сохранения состава сборочной модели</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_35.png"" alt="""">
+</div>
+<p>В открывшемся диалоговом окно ввода количества (рис. 24) пользователю подсвечивается название выбранного объекта и название объекта вставки, а также представляется возможность ввести количество вхождений.</p>
+<p>Ввод количества вхождений</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_36.png"" alt="""">
+</div>
+<p>После подтверждения кнопкой «Вставить» структура добавленной сборочной модели отображается в дереве ЭСИ (панель справа), новые элементы создаваемой структуры выделяются цветом (рис. 25).</p>
+<p>Отображение состава сохраняемой ЭСИ</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_37.png"" alt="""">
+</div>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_38.png"" alt="""">
+</div>
+<p>В случае ошибочного подключения структуры сборочной модели в ЭСИ пользователю необходимо нажать кнопку   «Обновить ЭСИ» для обновления параметров дерева ЭСИ (в правой части формы) и затем повторить описанные выше шаги по выбору объекта справочника ЭСИ для сохранения состава сборочной модели.</p>
+<p>Для сохранения структуры в БД необходимо нажать на кнопку «Сохранить ЭСИ в САРУС».</p>
+<p>Ход процесса сохранения и процент выполнения операции отображаются в соответствующих элементах главного окна программы (рис. 26).</p>
+<p>Отображение хода выполнения операции</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_39.png"" alt="""">
+</div>
+<p>По завершении операции пользователю выводится информационное сообщение (рис. 27).</p>
+<p>Сообщение об успешном выполнении операции</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_40.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 34, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_34.png'), 'type': 'image'}, {'id': 35, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_35.png'), 'type': 'image'}, {'id': 36, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_36.png'), 'type': 'image'}, {'id': 37, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_37.png'), 'type': 'image'}, {'id': 38, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_38.png'), 'type': 'image'}, {'id': 39, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_39.png'), 'type': 'image'}, {'id': 40, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_40.png'), 'type': 'image'}];d0150990-7653-4e1a-9f9a-d20768a6a351.html
+5.3.3 Результат выполнения операции сохранения ЭСИ;"В результате выполнения операции создаются объекты справочника ЭСИ. Соответствующие им файлы компонентов создаются в справочнике «Файлы», а также создаются связи между объектом ЭСИ и файлом. Связь с материалом объекта отображается на вкладке «Материал», на панели «Свойства» (рис. 28).
+
+Результат выполнения программы, отображенный в клиенте СПЖЦ.PDM
+
+
+[Изображение 41: ]
+
+Пользователь может применить созданные изменения и сохранить структуру, либо отменить изменения при помощи стандартных функций клиента САРУС.PDM либо с помощью кнопок в окне модуля «Интегратор Компас».
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.3.3 Результат выполнения операции сохранения ЭСИ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.3.3 Результат выполнения операции сохранения ЭСИ</h1>
+<p>В результате выполнения операции создаются объекты справочника ЭСИ. Соответствующие им файлы компонентов создаются в справочнике «Файлы», а также создаются связи между объектом ЭСИ и файлом. Связь с материалом объекта отображается на вкладке «Материал», на панели «Свойства» (рис. 28).</p>
+<p>Результат выполнения программы, отображенный в клиенте СПЖЦ.PDM</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_41.png"" alt="""">
+</div>
+<p>Пользователь может применить созданные изменения и сохранить структуру, либо отменить изменения при помощи стандартных функций клиента САРУС.PDM либо с помощью кнопок в окне модуля «Интегратор Компас».</p>
+
+    </div>
+</body>
+</html>";[];[{'id': 41, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_41.png'), 'type': 'image'}];a9b9b015-5a7c-4dd2-8c09-d1072c977f7b.html
+5.4.1 Проверка целостности информации материала;"
+[Изображение 42: ]
+
+В головном окне «Интегратор компас» пользователь нажимает на кнопку «Считывание параметров элемента сборки» , расположенную под областью «Структура сборки в Компас-3D». В открывшемся диалоговом окне «Настройка соответствия материалов КОМПАС и САРУС» необходимо установить соответствие.
+
+Проставить соответствие материалов относительно данных справочника «Материалы» программы САРУС. Если соответствие материалов один раз настроено, то необходимый вариант соответствия отображается в столбце справа (рис. 29).
+
+Настройка соответствия материалов КОМПАС и САРУС
+
+
+[Изображение 43: ]
+
+При нажатии на кнопку «Проверить» программный модуль «Интегратор Компас» обращается к справочнику САРУС и проверяет наличие введенного материала.
+
+При успешной проверке появляется информационное окно об успешной установке связей.
+
+Настройка соответствия материалов пополняется с вводом новых данных и хранится в файле формата «*.json» в рабочей папке пользователя (рис. 30).
+
+Пример содержимого файла настройки соответствия материалов
+
+
+[Изображение 44: ]
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.4.1 Проверка целостности информации материала</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.4.1 Проверка целостности информации материала</h1>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_42.png"" alt="""">
+</div>
+<p>В головном окне «Интегратор компас» пользователь нажимает на кнопку «Считывание параметров элемента сборки» , расположенную под областью «Структура сборки в Компас-3D». В открывшемся диалоговом окне «Настройка соответствия материалов КОМПАС и САРУС» необходимо установить соответствие.</p>
+<p>Проставить соответствие материалов относительно данных справочника «Материалы» программы САРУС. Если соответствие материалов один раз настроено, то необходимый вариант соответствия отображается в столбце справа (рис. 29).</p>
+<p>Настройка соответствия материалов КОМПАС и САРУС</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_43.png"" alt="""">
+</div>
+<p>При нажатии на кнопку «Проверить» программный модуль «Интегратор Компас» обращается к справочнику САРУС и проверяет наличие введенного материала.</p>
+<p>При успешной проверке появляется информационное окно об успешной установке связей.</p>
+<p>Настройка соответствия материалов пополняется с вводом новых данных и хранится в файле формата «*.json» в рабочей папке пользователя (рис. 30).</p>
+<p>Пример содержимого файла настройки соответствия материалов</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_44.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 42, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_42.png'), 'type': 'image'}, {'id': 43, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_43.png'), 'type': 'image'}, {'id': 44, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_44.png'), 'type': 'image'}];77f58454-1ebf-4c9a-b197-78a169a35896.html
+5.4.2 Проверка целостности информации стандартного изделия;"
+[Изображение 45: ]
+
+В окне «Интегратор Компас», выбрать головной объект в списке слева, затем выбрать элемент дерева ЭСИ, к которому будет привязан состав, и в момент нажатия на кнопку переноса  открывается окно уведомления (рис. 31).
+
+Уведомление пользователя
+
+
+[Изображение 46: ]
+
+При нажатии на кнопку «ОК» открывается диалоговое окно настройки соответствия стандартных деталей (рис. 32).
+
+Настройка соответствия стандартных изделий КОМПАС и САРУС
+
+
+[Изображение 47: ]
+
+Пользователю необходимо ввести значения для каждой строки или закрыть окно нажав «крестик».
+
+В правой колонке доступно ввести название стандартного изделия вручную. Затем необходимо нажать на кнопку «Проверить». В случае отсутствия в БД САРУС введенного названия, появляется предупреждение (рис. 33). В случае наличия в БД САРУС введенного названия, появится уведомление (рис. 34), затем строка скрывается в общем списке и записывает установленное значение в файл настройки.
+
+Предупреждение пользователя
+
+
+[Изображение 48: ]
+
+Уведомление пользователя
+
+
+[Изображение 49: ]
+
+Настройка соответствия стандартных изделий пополняется с вводом новых данных и хранится в файле формата «*.json» в рабочей папке пользователя (рис. 35).
+
+Настройка соответствия стандартных изделий КОМПАС и САРУС
+
+
+[Изображение 50: ]
+
+
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.4.2 Проверка целостности информации стандартного изделия</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.4.2 Проверка целостности информации стандартного изделия</h1>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_45.png"" alt="""">
+</div>
+<p>В окне «Интегратор Компас», выбрать головной объект в списке слева, затем выбрать элемент дерева ЭСИ, к которому будет привязан состав, и в момент нажатия на кнопку переноса  открывается окно уведомления (рис. 31).</p>
+<p>Уведомление пользователя</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_46.png"" alt="""">
+</div>
+<p>При нажатии на кнопку «ОК» открывается диалоговое окно настройки соответствия стандартных деталей (рис. 32).</p>
+<p>Настройка соответствия стандартных изделий КОМПАС и САРУС</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_47.png"" alt="""">
+</div>
+<p>Пользователю необходимо ввести значения для каждой строки или закрыть окно нажав «крестик».</p>
+<p>В правой колонке доступно ввести название стандартного изделия вручную. Затем необходимо нажать на кнопку «Проверить». В случае отсутствия в БД САРУС введенного названия, появляется предупреждение (рис. 33). В случае наличия в БД САРУС введенного названия, появится уведомление (рис. 34), затем строка скрывается в общем списке и записывает установленное значение в файл настройки.</p>
+<p>Предупреждение пользователя</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_48.png"" alt="""">
+</div>
+<p>Уведомление пользователя</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_49.png"" alt="""">
+</div>
+<p>Настройка соответствия стандартных изделий пополняется с вводом новых данных и хранится в файле формата «*.json» в рабочей папке пользователя (рис. 35).</p>
+<p>Настройка соответствия стандартных изделий КОМПАС и САРУС</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_50.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 45, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_45.png'), 'type': 'image'}, {'id': 46, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_46.png'), 'type': 'image'}, {'id': 47, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_47.png'), 'type': 'image'}, {'id': 48, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_48.png'), 'type': 'image'}, {'id': 49, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_49.png'), 'type': 'image'}, {'id': 50, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_50.png'), 'type': 'image'}];677edb84-5140-4a85-8951-bb649d3958b6.html
+5.5 Открытие сборочной единицы в КОМПАС;"Пользователь выбирает объект сборочной модели, разработанный в Компас-3D, из справочника ЭСИ и на Ленте нажимает кнопку «Открыть в КОМПАС» (рис. 36).
+
+Кнопка «Открыть в КОМПАС»
+
+
+[Изображение 51: ]
+
+При подключении запрашивается авторизация, в открывшемся диалоговом окне пользователю необходимо ввести логин и пароль. Затем нажать на кнопку «Подключение» (рис. 37).
+
+Авторизация при запуске
+
+
+[Изображение 52: ]
+
+Программный модуль «Интегратор Компас» считывает данные САРУС с доступом для текущего пользователя и открывает доступные ему файлы в приложение Компас-3D (рис. 38).
+
+Открытая сборка в Компас
+
+
+[Изображение 53: ]
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.5 Открытие сборочной единицы в КОМПАС</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.5 Открытие сборочной единицы в КОМПАС</h1>
+<p>Пользователь выбирает объект сборочной модели, разработанный в Компас-3D, из справочника ЭСИ и на Ленте нажимает кнопку «Открыть в КОМПАС» (рис. 36).</p>
+<p>Кнопка «Открыть в КОМПАС»</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_51.png"" alt="""">
+</div>
+<p>При подключении запрашивается авторизация, в открывшемся диалоговом окне пользователю необходимо ввести логин и пароль. Затем нажать на кнопку «Подключение» (рис. 37).</p>
+<p>Авторизация при запуске</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_52.png"" alt="""">
+</div>
+<p>Программный модуль «Интегратор Компас» считывает данные САРУС с доступом для текущего пользователя и открывает доступные ему файлы в приложение Компас-3D (рис. 38).</p>
+<p>Открытая сборка в Компас</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_53.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 51, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_51.png'), 'type': 'image'}, {'id': 52, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_52.png'), 'type': 'image'}, {'id': 53, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_53.png'), 'type': 'image'}];45f03bec-a45b-44f5-b3ea-69f91921f4fb.html
+5.6 Обновление структуры изделия;"Пользователь выбирает объект сборочной модели, разработанный в Компас-3D, из справочника ЭСИ и на Ленте нажимает кнопку «Взять на редактирование». Затем нажимает кнопку «Открыть в КОМПАС».
+
+В открывшейся сборочной модели Компас-3D пользователь добавляет или удаляет элементы/компоненты, сохраняет изменения.
+
+На Ленте нажать кнопку «Сохранить в САРУС», в открывшемся окне необходимо ввести данные по авторизации и нажать кнопку «Подключение». Открывается главное окно программного модуля «Интегратор Компас» с отображением состава сборочной модели (рис. 39).
+
+Главное окно программного модуля «Интегратор Компас»
+
+
+[Изображение 54: ]
+
+
+[Изображение 55: ]
+
+Пользователь нажимает на кнопку  «Считывание параметров элемента сборки», расположенную под областью «Структура сборки в Компас-3D». Запускается процесс получения параметров сборочной модели из Компас-3D. При совпадении и идентичности объекта модели с объектом дерева ЭСИ рядом с параметром «Обозначение» проставляется соответствующая иконка .
+
+Выбрать головной объект в списке слева, затем выбрать элемент дерева ЭСИ, к которому будет привязан состав и нажать на кнопку переноса.
+
+Запускается процесс идентификации отличий между загруженной в САПР структурой изделия и актуальной структурой в справочнике ЭСИ RPLM. По завершению элементы сборочной модели отображаются в цвете (рис. 40).
+
+Отображение результата переноса в справочник ЭСИ
+
+
+[Изображение 56: ]
+
+
+
+
+[Изображение 57: ]
+
+При нажатии на кнопку справки , пользователю раскрывается информационное окно легенды цвета (рис. 41).
+
+Легенда сохранения ЭСИ
+
+
+[Изображение 58: ]
+
+Для сохранения измененной структуры в БД необходимо нажать на кнопку «Сохранить ЭСИ в САРУС».
+
+Ход процесса сохранения и процент выполнения операции отображаются в соответствующих элементах главного окна программы. По завершении операции пользователю выводится информационное сообщение «ЭСИ успешно сохранена».
+
+В результате выполнения операции создаются новые, перезаписываются измененные или удаляются из состава сборочной модели объекты справочника ЭСИ (рис. 42).
+
+Результат выполнения программы, отображенный в клиенте СПЖЦ.PDM
+
+
+[Изображение 59: ]
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.6 Обновление структуры изделия</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.6 Обновление структуры изделия</h1>
+<p>Пользователь выбирает объект сборочной модели, разработанный в Компас-3D, из справочника ЭСИ и на Ленте нажимает кнопку «Взять на редактирование». Затем нажимает кнопку «Открыть в КОМПАС».</p>
+<p>В открывшейся сборочной модели Компас-3D пользователь добавляет или удаляет элементы/компоненты, сохраняет изменения.</p>
+<p>На Ленте нажать кнопку «Сохранить в САРУС», в открывшемся окне необходимо ввести данные по авторизации и нажать кнопку «Подключение». Открывается главное окно программного модуля «Интегратор Компас» с отображением состава сборочной модели (рис. 39).</p>
+<p>Главное окно программного модуля «Интегратор Компас»</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_54.png"" alt="""">
+</div>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_55.png"" alt="""">
+</div>
+<p>Пользователь нажимает на кнопку  «Считывание параметров элемента сборки», расположенную под областью «Структура сборки в Компас-3D». Запускается процесс получения параметров сборочной модели из Компас-3D. При совпадении и идентичности объекта модели с объектом дерева ЭСИ рядом с параметром «Обозначение» проставляется соответствующая иконка .</p>
+<p>Выбрать головной объект в списке слева, затем выбрать элемент дерева ЭСИ, к которому будет привязан состав и нажать на кнопку переноса.</p>
+<p>Запускается процесс идентификации отличий между загруженной в САПР структурой изделия и актуальной структурой в справочнике ЭСИ RPLM. По завершению элементы сборочной модели отображаются в цвете (рис. 40).</p>
+<p>Отображение результата переноса в справочник ЭСИ</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_56.png"" alt="""">
+</div>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_57.png"" alt="""">
+</div>
+<p>При нажатии на кнопку справки , пользователю раскрывается информационное окно легенды цвета (рис. 41).</p>
+<p>Легенда сохранения ЭСИ</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_58.png"" alt="""">
+</div>
+<p>Для сохранения измененной структуры в БД необходимо нажать на кнопку «Сохранить ЭСИ в САРУС».</p>
+<p>Ход процесса сохранения и процент выполнения операции отображаются в соответствующих элементах главного окна программы. По завершении операции пользователю выводится информационное сообщение «ЭСИ успешно сохранена».</p>
+<p>В результате выполнения операции создаются новые, перезаписываются измененные или удаляются из состава сборочной модели объекты справочника ЭСИ (рис. 42).</p>
+<p>Результат выполнения программы, отображенный в клиенте СПЖЦ.PDM</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_59.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 54, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_54.png'), 'type': 'image'}, {'id': 55, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_55.png'), 'type': 'image'}, {'id': 56, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_56.png'), 'type': 'image'}, {'id': 57, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_57.png'), 'type': 'image'}, {'id': 58, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_58.png'), 'type': 'image'}, {'id': 59, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_59.png'), 'type': 'image'}];9eb3885e-2160-45f1-9fcb-3517a0418577.html
+5.7 Сохранение состава сборочной модели в файл формата XML, JSON;"При работе главного окна модуля «Интегратор Компас» у пользователя есть возможность сохранить состав сборочной модели Компас-3D в файл обменного формата XML или в JSON.
+
+При нажатии на кнопку «Сохранить ЭСИ в файл формате xml» или «Сохранить ЭСИ в файл формате JSON» открывается диалоговое окно «Сохранение» для выбора пути создания полученного файла со структурой (рис. 43).
+
+Диалоговое окно «Сохранение»
+
+
+[Изображение 60: ]
+
+При переходе по пути расположения файла и открытии его в текстовом редакторе пользователь видит, что весь компонентный состав и значения параметров сохранены полностью (рис. 44).
+
+Содержимое файла XML
+
+
+[Изображение 61: ]
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>5.7 Сохранение состава сборочной модели в файл формата XML, JSON</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>5.7 Сохранение состава сборочной модели в файл формата XML, JSON</h1>
+<p>При работе главного окна модуля «Интегратор Компас» у пользователя есть возможность сохранить состав сборочной модели Компас-3D в файл обменного формата XML или в JSON.</p>
+<p>При нажатии на кнопку «Сохранить ЭСИ в файл формате xml» или «Сохранить ЭСИ в файл формате JSON» открывается диалоговое окно «Сохранение» для выбора пути создания полученного файла со структурой (рис. 43).</p>
+<p>Диалоговое окно «Сохранение»</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_60.png"" alt="""">
+</div>
+<p>При переходе по пути расположения файла и открытии его в текстовом редакторе пользователь видит, что весь компонентный состав и значения параметров сохранены полностью (рис. 44).</p>
+<p>Содержимое файла XML</p>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_61.png"" alt="""">
+</div>
+
+    </div>
+</body>
+</html>";[];[{'id': 60, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_60.png'), 'type': 'image'}, {'id': 61, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_61.png'), 'type': 'image'}];5199ca50-9466-4fb3-95d8-87f2802508bd.html
+6 Завершение программы;"
+[Изображение 62: ]
+
+Для завершения работы программного модуля «Интегратор Компас» нужно нажать пиктограмму   в правом верхнем углу главного окна.
+
+
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>6 Завершение программы</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>6 Завершение программы</h1>
+<div class=""figure"">
+<img src=""images/dc584904-2488-460d-8a3c-e478078b5ea5/image_62.png"" alt="""">
+</div>
+<p>Для завершения работы программного модуля «Интегратор Компас» нужно нажать пиктограмму   в правом верхнем углу главного окна.</p>
+
+    </div>
+</body>
+</html>";[];[{'id': 62, 'caption': '', 'path': PosixPath('images/dc584904-2488-460d-8a3c-e478078b5ea5/image_62.png'), 'type': 'image'}];5e4a5282-0771-4a4c-aa83-8e902aebfe95.html
+7 Сообщения пользователю;"Во время работы с программным модулем «Интегратор Компас» сообщения пользователю могут быть двух типов:
+
+1. информационные;
+
+
+1. сообщения об ошибках.
+
+
+Предупреждающие сообщения, возникающие в процессе выполнения программного модуля «Интегратор Компас», выводятся при выполнении команд в системных диалогах и специальных диалоговых окнах. Их текст приводится без сокращений и должен быть интуитивно понятен пользователю, поэтому не требует дополнительных пояснений. После вывода предупреждения или сообщения об ошибке необходимо ввести корректные данные и повторить необходимую операцию.
+
+Сообщения выводятся во всплывающих окнах. Примеры сообщений оператору представлены в таблице 1.
+
+Таблица 1 – Примеры сообщений оператору
+
+
+[Таблица 1]
+
+──────────────────────────────────────────────────
+| Тип сообщения | Сообщение | Комментарий |
+──────────────────────────────────────────────────
+| Информационное | ЭСИ успешно сохранена | Оповещает пользователя об успешном выполнении операции |
+| Информационное | Перенос данных и отображение в структуре выполнено | Оповещает пользователя об успешном выполнении операции |
+| Информационное | В САРУС отсутствуют данные по объекту:
+- ….
+Проверьте правильность ввода значений, либо выберите другое стандартное изделие. | Оповещает пользователя об ошибке ввода наименования стандартного изделия. |
+| Ошибка | Невозможно загрузить настройки приложения | Ошибка загрузки настроек |
+| Ошибка | Отсутствует соединение с сервером приложений | Ошибка соединения с сервером |
+| Ошибка | Невозможно получить структуру сборочной единицы из Компас-3D. Убедитесь, что приложение Компас запущено и повторите попытку | Ошибка загрузки структуры сборки из Компас-3D |
+| Ошибка | Ошибка при сохранении объекта в справочник электронная структура изделий. Обратитесь к администратору | Ошибка сохранения ЭСИ |
+──────────────────────────────────────────────────
+
+
+
+
+";;"<!DOCTYPE html>
+<html lang=""ru"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>7 Сообщения пользователю</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+            font-size: 16px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 30px 0;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        .highlight {
+            background-color: #f9e79f;
+            font-weight: bold;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <h1>7 Сообщения пользователю</h1>
+<p>Во время работы с программным модулем «Интегратор Компас» сообщения пользователю могут быть двух типов:</p>
+<p>1. информационные;</p>
+<p>
+1. сообщения об ошибках.</p>
+<p>
+Предупреждающие сообщения, возникающие в процессе выполнения программного модуля «Интегратор Компас», выводятся при выполнении команд в системных диалогах и специальных диалоговых окнах. Их текст приводится без сокращений и должен быть интуитивно понятен пользователю, поэтому не требует дополнительных пояснений. После вывода предупреждения или сообщения об ошибке необходимо ввести корректные данные и повторить необходимую операцию.</p>
+<p>Сообщения выводятся во всплывающих окнах. Примеры сообщений оператору представлены в таблице 1.</p>
+<p>Таблица 1 – Примеры сообщений оператору</p>
+<table border=""1"" class=""dataframe docling-table"" id=""table-1"">
+  <thead>
+    <tr style=""text-align: right;"">
+      <th>Тип сообщения</th>
+      <th>Сообщение</th>
+      <th>Комментарий</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Информационное</td>
+      <td>ЭСИ успешно сохранена</td>
+      <td>Оповещает пользователя об успешном выполнении операции</td>
+    </tr>
+    <tr>
+      <td>Информационное</td>
+      <td>Перенос данных и отображение в структуре выполнено</td>
+      <td>Оповещает пользователя об успешном выполнении операции</td>
+    </tr>
+    <tr>
+      <td>Информационное</td>
+      <td>В САРУС отсутствуют данные по объекту:\n- ….\nПроверьте правильность ввода значений, либо выберите другое стандартное изделие.</td>
+      <td>Оповещает пользователя об ошибке ввода наименования стандартного изделия.</td>
+    </tr>
+    <tr>
+      <td>Ошибка</td>
+      <td>Невозможно загрузить настройки приложения</td>
+      <td>Ошибка загрузки настроек</td>
+    </tr>
+    <tr>
+      <td>Ошибка</td>
+      <td>Отсутствует соединение с сервером приложений</td>
+      <td>Ошибка соединения с сервером</td>
+    </tr>
+    <tr>
+      <td>Ошибка</td>
+      <td>Невозможно получить структуру сборочной единицы из Компас-3D. Убедитесь, что приложение Компас запущено и повторите попытку</td>
+      <td>Ошибка загрузки структуры сборки из Компас-3D</td>
+    </tr>
+    <tr>
+      <td>Ошибка</td>
+      <td>Ошибка при сохранении объекта в справочник электронная структура изделий. Обратитесь к администратору</td>
+      <td>Ошибка сохранения ЭСИ</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</body>
+</html>";"[{'id': 1, 'caption': [], 'html': '<table border=""1"" class=""dataframe docling-table"" id=""table-1"">\n  <thead>\n    <tr style=""text-align: right;"">\n      <th>Тип сообщения</th>\n      <th>Сообщение</th>\n      <th>Комментарий</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Информационное</td>\n      <td>ЭСИ успешно сохранена</td>\n      <td>Оповещает пользователя об успешном выполнении операции</td>\n    </tr>\n    <tr>\n      <td>Информационное</td>\n      <td>Перенос данных и отображение в структуре выполнено</td>\n      <td>Оповещает пользователя об успешном выполнении операции</td>\n    </tr>\n    <tr>\n      <td>Информационное</td>\n      <td>В САРУС отсутствуют данные по объекту:\\n- ….\\nПроверьте правильность ввода значений, либо выберите другое стандартное изделие.</td>\n      <td>Оповещает пользователя об ошибке ввода наименования стандартного изделия.</td>\n    </tr>\n    <tr>\n      <td>Ошибка</td>\n      <td>Невозможно загрузить настройки приложения</td>\n      <td>Ошибка загрузки настроек</td>\n    </tr>\n    <tr>\n      <td>Ошибка</td>\n      <td>Отсутствует соединение с сервером приложений</td>\n      <td>Ошибка соединения с сервером</td>\n    </tr>\n    <tr>\n      <td>Ошибка</td>\n      <td>Невозможно получить структуру сборочной единицы из Компас-3D. Убедитесь, что приложение Компас запущено и повторите попытку</td>\n      <td>Ошибка загрузки структуры сборки из Компас-3D</td>\n    </tr>\n    <tr>\n      <td>Ошибка</td>\n      <td>Ошибка при сохранении объекта в справочник электронная структура изделий. Обратитесь к администратору</td>\n      <td>Ошибка сохранения ЭСИ</td>\n    </tr>\n  </tbody>\n</table>', 'text': '\n──────────────────────────────────────────────────\n| Тип сообщения | Сообщение | Комментарий |\n──────────────────────────────────────────────────\n| Информационное | ЭСИ успешно сохранена | Оповещает пользователя об успешном выполнении операции |\n| Информационное | Перенос данных и отображение в структуре выполнено | Оповещает пользователя об успешном выполнении операции |\n| Информационное | В САРУС отсутствуют данные по объекту:\n- ….\nПроверьте правильность ввода значений, либо выберите другое стандартное изделие. | Оповещает пользователя об ошибке ввода наименования стандартного изделия. |\n| Ошибка | Невозможно загрузить настройки приложения | Ошибка загрузки настроек |\n| Ошибка | Отсутствует соединение с сервером приложений | Ошибка соединения с сервером |\n| Ошибка | Невозможно получить структуру сборочной единицы из Компас-3D. Убедитесь, что приложение Компас запущено и повторите попытку | Ошибка загрузки структуры сборки из Компас-3D |\n| Ошибка | Ошибка при сохранении объекта в справочник электронная структура изделий. Обратитесь к администратору | Ошибка сохранения ЭСИ |\n──────────────────────────────────────────────────\n', 'dataframe':     Тип сообщения                                          Сообщение                                        Комментарий
+0  Информационное                              ЭСИ успешно сохранена  Оповещает пользователя об успешном выполнении ...
+1  Информационное  Перенос данных и отображение в структуре выпол...  Оповещает пользователя об успешном выполнении ...
+2  Информационное  В САРУС отсутствуют данные по объекту:\n- ….\n...  Оповещает пользователя об ошибке ввода наимено...
+3          Ошибка          Невозможно загрузить настройки приложения                           Ошибка загрузки настроек
+4          Ошибка       Отсутствует соединение с сервером приложений                       Ошибка соединения с сервером
+5          Ошибка  Невозможно получить структуру сборочной единиц...      Ошибка загрузки структуры сборки из Компас-3D
+6          Ошибка  Ошибка при сохранении объекта в справочник эле...                              Ошибка сохранения ЭСИ}]";[];ec6ee6c1-4f51-401d-8214-f8cff17a1d79.html
